@@ -94,7 +94,7 @@ public class ReasonerMock {
   }
 
   private void sleep() throws InterruptedException {
-    Thread.sleep(ThreadLocalRandom.current().nextInt(150, 300));
+    Thread.sleep(ThreadLocalRandom.current().nextInt(10, 50));
   }
 
   private void intentionProgression() {
