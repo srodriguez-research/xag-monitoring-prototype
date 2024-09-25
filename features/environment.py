@@ -8,9 +8,11 @@ from uss.tempo import parse_trace_json
 def before_all(context):
     # Get the trace to verify from cli
     trace_file = context.config.userdata["trace"]
+    logging.debug(f"behave starting verification of trace {trace_file}")
     if trace_file == None:
         raise Exception("Must provide a trace to parse ")
     trace = parse_trace_json(trace_file)
+    logging.debug(f"behave trace {trace_file} parsing complete")
     context.trace = trace
 
     handler = logging_loki.LokiHandler(
