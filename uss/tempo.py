@@ -1,6 +1,24 @@
 import base64
 import json
 
+import requests
+
+# URL of the API
+TEMPO_URL = "http://localhost:3200/api"
+
+
+def search_tempo(traceql) -> dict:
+    params = {
+        "q": traceql,
+    }
+    response = requests.get(TEMPO_URL + "/search", params=params)
+    return response.json()
+
+
+def get_trace(trace_id) -> dict:
+    response = requests.get(TEMPO_URL + f"/v2/traces/{trace_id}")
+    return response.json()
+
 
 def base64_to_hex(trace_id_base64) -> str:
     return base64.b16encode(base64.b64decode(trace_id_base64)).decode("utf-8").lower()
