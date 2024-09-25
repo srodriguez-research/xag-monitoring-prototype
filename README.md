@@ -10,7 +10,22 @@ docker compose down -v
 ```
 
 
+
 `tempo-data` stores all data for local use only.
+
+
+# Running python
+
+```shell
+
+poetry run behave
+```
+
+Editing with vim
+```
+source $(poetry env info --path)/bin/activate
+```
+
 
 ## References
 
