@@ -1,51 +1,119 @@
 package io.github.hmteams;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Logger;
 
 import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.trace.StatusCode;
 import io.opentelemetry.api.trace.Tracer;
+import io.opentelemetry.context.Context;
 import io.opentelemetry.context.Scope;
 
 public class ReasonerMock {
 
   private Logger logger = Logger.getLogger(ReasonerMock.class.getName());
 
+  // Get a Tracer instance from OpenTelemetry.
+  Tracer tracer = GlobalOpenTelemetry.getTracer(ReasonerMock.class.getName(),
+      "0.1.0");
+
   public static void main(String[] args) {
-    // ReasonerMock reasoner = new ReasonerMock();
-    // for (int i = 0; i < 1000; i++) {
-    // reasoner.reasoningCycle();
-    // }
-    createSpan();
+    ReasonerMock reasoner = new ReasonerMock();
+    for (int i = 0; i < 1000; i++) {
+      reasoner.reasoningCycle();
+    }
+    // createSpan();
   }
 
   private void reasoningCycle() {
+
+    Span span = tracer.spanBuilder("reasoning_cycle").startSpan();
+    // Make this new span the current active span.
+    Scope scope = span.makeCurrent();
     // Start Traces
     goalRevision();
     planRevision();
     intentionProgression();
+
+    scope.close();
+    span.end();
   }
 
   private void goalRevision() {
+    // Start a new span with the name "mySpan".
+    Span span = tracer.spanBuilder("goal_revision").startSpan();
+    // Make this new span the current active span.
+    Scope scope = span.makeCurrent();
 
-    // // Get a Tracer instance from OpenTelemetry.
-    // Tracer tracer = GlobalOpenTelemetry.getTracer(ReasonerMock.class.getName(),
-    // "0.1.0");
-    //
-    // // Start a new span with the name "mySpan".
-    // Span span = tracer.spanBuilder("goal_revision").startSpan();
-    //
-    // // Make this new span the current active span.
-    // Scope scope = span.makeCurrent();
-    //
+    try {
+
+      span.setAttribute("xag.trigger.type", "event");
+      span.setAttribute("xag.trigger.name", "ReviewGoals");
+      span.setAttribute("xag.trigger.data", "[]");
+      span.setAttribute("xag.query.goals.active", "[GetCoffee]");
+      span.setAttribute("xag.query.goals.adopted", "[]");
+      sleep();
+    } catch (Exception e) {
+      span.setStatus(StatusCode.ERROR, "Exception thrown in method");
+    } finally {
+      scope.close();
+      span.end();
+    }
+
   }
 
-  private static void planRevision() {
+  private void planRevision() {
+    List<String> PLANS = List.of("KitchenCoffee", "ShopCoffee", "OfficeCoffee");
+    // Start a new span with the name "mySpan".
+    Span span = tracer.spanBuilder("plan_revision").startSpan();
+    // Make this new span the current active span.
+    Scope scope = span.makeCurrent();
+
+    Random rnd = new Random();
+    try {
+
+      span.setAttribute("xag.trigger.type", "event");
+      span.setAttribute("xag.trigger.name", "ReviewPlans");
+      span.setAttribute("xag.trigger.data", "[]");
+      span.setAttribute("xag.query.applicablePlans", "[" + PLANS.get(rnd.nextInt(PLANS.size())) + "]");
+      span.setAttribute("xag.query.staffCardAvailable", rnd.nextBoolean());
+      span.setAttribute("xag.query.annInOffice", rnd.nextBoolean());
+      span.setAttribute("xag.query.haveMoney", rnd.nextBoolean());
+      sleep();
+    } catch (Exception e) {
+      span.setStatus(StatusCode.ERROR, "Exception thrown in method");
+    } finally {
+      scope.close();
+      span.end();
+    }
 
   }
 
-  private static void intentionProgression() {
+  private void sleep() throws InterruptedException {
+    Thread.sleep(ThreadLocalRandom.current().nextInt(150, 300));
+  }
+
+  private void intentionProgression() {
+    Span span = tracer.spanBuilder("intention_progression").startSpan();
+    // Make this new span the current active span.
+    Scope scope = span.makeCurrent();
+
+    try {
+
+      span.setAttribute("xag.trigger.type", "event");
+      span.setAttribute("xag.trigger.name", "ProgessIntentions");
+      span.setAttribute("xag.trigger.data", "[]");
+      sleep();
+    } catch (Exception e) {
+      span.setStatus(StatusCode.ERROR, "Exception thrown in method");
+    } finally {
+      scope.close();
+      span.end();
+    }
 
   }
 
