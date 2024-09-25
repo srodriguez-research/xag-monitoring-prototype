@@ -11,6 +11,7 @@ behave = "^1.2.6"
 pytest = "^8.3.3"
 pytest-watch = "^4.2.0"
 python-logging-loki = "^0.3.1"
+coloredlogs = "^15.0.1"
 
 
 [build-system]
