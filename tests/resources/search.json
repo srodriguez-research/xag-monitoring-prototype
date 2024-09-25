@@ -1,0 +1,1943 @@
+{
+  "traces": [
+    {
+      "traceID": "1a2ea05ca6548fba5a07768f897578c4",
+      "rootServiceName": "<root span not yet received>",
+      "startTimeUnixNano": "1726902797812563667",
+      "durationMs": 195,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "fc99cf29d4b5c424",
+            "startTimeUnixNano": "1726902797812563667",
+            "durationNanos": "195026958",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "fc99cf29d4b5c424",
+              "startTimeUnixNano": "1726902797812563667",
+              "durationNanos": "195026958",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "ef63657b1b939c011ea78c34ee9282d",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902796543815000",
+      "durationMs": 656,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "0ccd4bce9729eab6",
+            "startTimeUnixNano": "1726902796543867250",
+            "durationNanos": "243714458",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "5657b88477f00fb1",
+            "startTimeUnixNano": "1726902796787666125",
+            "durationNanos": "202525875",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "98fb30f59031b0b4",
+            "startTimeUnixNano": "1726902796990214875",
+            "durationNanos": "210552708",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "0ccd4bce9729eab6",
+              "startTimeUnixNano": "1726902796543867250",
+              "durationNanos": "243714458",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "5657b88477f00fb1",
+              "startTimeUnixNano": "1726902796787666125",
+              "durationNanos": "202525875",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "98fb30f59031b0b4",
+              "startTimeUnixNano": "1726902796990214875",
+              "durationNanos": "210552708",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "71b6e578648a842e49743ddd8eb2550",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902790987013000",
+      "durationMs": 716,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "74303cd26244b9d2",
+            "startTimeUnixNano": "1726902790987063958",
+            "durationNanos": "220584875",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "c0ca4fcae174f0fa",
+            "startTimeUnixNano": "1726902791207690708",
+            "durationNanos": "216279333",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "06f4f5a662eab178",
+            "startTimeUnixNano": "1726902791424001083",
+            "durationNanos": "279229083",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "74303cd26244b9d2",
+              "startTimeUnixNano": "1726902790987063958",
+              "durationNanos": "220584875",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "c0ca4fcae174f0fa",
+              "startTimeUnixNano": "1726902791207690708",
+              "durationNanos": "216279333",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "06f4f5a662eab178",
+              "startTimeUnixNano": "1726902791424001083",
+              "durationNanos": "279229083",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "28f97c08b745716826233ad41938536a",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902789510964000",
+      "durationMs": 784,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "cac22bb9f56828a2",
+            "startTimeUnixNano": "1726902789511017791",
+            "durationNanos": "299259667",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "7a64d9770a4415aa",
+            "startTimeUnixNano": "1726902789810321000",
+            "durationNanos": "185402875",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "15bdc4db5558c0e6",
+            "startTimeUnixNano": "1726902789995743166",
+            "durationNanos": "299746584",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "cac22bb9f56828a2",
+              "startTimeUnixNano": "1726902789511017791",
+              "durationNanos": "299259667",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "7a64d9770a4415aa",
+              "startTimeUnixNano": "1726902789810321000",
+              "durationNanos": "185402875",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "15bdc4db5558c0e6",
+              "startTimeUnixNano": "1726902789995743166",
+              "durationNanos": "299746584",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "ac666ffe8ccbf239265093385a21ce2a",
+      "rootServiceName": "<root span not yet received>",
+      "startTimeUnixNano": "1726902787606078291",
+      "durationMs": 369,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "659d4be57077badc",
+            "startTimeUnixNano": "1726902787606078291",
+            "durationNanos": "185418709",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "26afba5d3255614a",
+            "startTimeUnixNano": "1726902787791528833",
+            "durationNanos": "184159000",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 2
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "659d4be57077badc",
+              "startTimeUnixNano": "1726902787606078291",
+              "durationNanos": "185418709",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "26afba5d3255614a",
+              "startTimeUnixNano": "1726902787791528833",
+              "durationNanos": "184159000",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 2
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 2
+        }
+      }
+    },
+    {
+      "traceID": "c0f2cf80d729df400d7c7be5fdce7f78",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902787094744000",
+      "durationMs": 511,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "1c9e0431d2289ca0",
+            "startTimeUnixNano": "1726902787094785541",
+            "durationNanos": "155055959",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "4017e2ec72d736f9",
+            "startTimeUnixNano": "1726902787249886000",
+            "durationNanos": "154669583",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "b6aa82a9e2a30982",
+            "startTimeUnixNano": "1726902787404595208",
+            "durationNanos": "201364083",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "1c9e0431d2289ca0",
+              "startTimeUnixNano": "1726902787094785541",
+              "durationNanos": "155055959",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "4017e2ec72d736f9",
+              "startTimeUnixNano": "1726902787249886000",
+              "durationNanos": "154669583",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "b6aa82a9e2a30982",
+              "startTimeUnixNano": "1726902787404595208",
+              "durationNanos": "201364083",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "c6dd86cecce69a429e533c7a7ebc8266",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902786331435000",
+      "durationMs": 763,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "c1e31190d9c0915b",
+            "startTimeUnixNano": "1726902786331486917",
+            "durationNanos": "285836500",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "5ecd00e4028714cd",
+            "startTimeUnixNano": "1726902786617346042",
+            "durationNanos": "291090167",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "004b60cb72ce2e42",
+            "startTimeUnixNano": "1726902786908467042",
+            "durationNanos": "186223250",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "c1e31190d9c0915b",
+              "startTimeUnixNano": "1726902786331486917",
+              "durationNanos": "285836500",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "5ecd00e4028714cd",
+              "startTimeUnixNano": "1726902786617346042",
+              "durationNanos": "291090167",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "004b60cb72ce2e42",
+              "startTimeUnixNano": "1726902786908467042",
+              "durationNanos": "186223250",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "b9b01ea5e7b7355fc5f121586a1bba4b",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902785737521000",
+      "durationMs": 593,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "bdea6f9087baf679",
+            "startTimeUnixNano": "1726902785737571750",
+            "durationNanos": "227916375",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "994b60fce68d7e3e",
+            "startTimeUnixNano": "1726902785965524458",
+            "durationNanos": "153904667",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "e1adde847f269c39",
+            "startTimeUnixNano": "1726902786119476916",
+            "durationNanos": "211891542",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "bdea6f9087baf679",
+              "startTimeUnixNano": "1726902785737571750",
+              "durationNanos": "227916375",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "994b60fce68d7e3e",
+              "startTimeUnixNano": "1726902785965524458",
+              "durationNanos": "153904667",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "e1adde847f269c39",
+              "startTimeUnixNano": "1726902786119476916",
+              "durationNanos": "211891542",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "518d565892ebd12035f341e5ec1959bb",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902785097559000",
+      "durationMs": 639,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "c436c1b24a0dfe0f",
+            "startTimeUnixNano": "1726902785097615833",
+            "durationNanos": "228916875",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "b8c0ba502545db8e",
+            "startTimeUnixNano": "1726902785326576250",
+            "durationNanos": "155528208",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "7901d6b2bd6c6a5d",
+            "startTimeUnixNano": "1726902785482136750",
+            "durationNanos": "255321667",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "c436c1b24a0dfe0f",
+              "startTimeUnixNano": "1726902785097615833",
+              "durationNanos": "228916875",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "b8c0ba502545db8e",
+              "startTimeUnixNano": "1726902785326576250",
+              "durationNanos": "155528208",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "7901d6b2bd6c6a5d",
+              "startTimeUnixNano": "1726902785482136750",
+              "durationNanos": "255321667",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "a9022db29e304376d9f3ca71a9f94a98",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902784399974000",
+      "durationMs": 697,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "b72e39d26075aa4b",
+            "startTimeUnixNano": "1726902784400020000",
+            "durationNanos": "266889917",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "454eee5604896e91",
+            "startTimeUnixNano": "1726902784666944083",
+            "durationNanos": "240173250",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "f33338e82024757c",
+            "startTimeUnixNano": "1726902784907138333",
+            "durationNanos": "190368459",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "b72e39d26075aa4b",
+              "startTimeUnixNano": "1726902784400020000",
+              "durationNanos": "266889917",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "454eee5604896e91",
+              "startTimeUnixNano": "1726902784666944083",
+              "durationNanos": "240173250",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "f33338e82024757c",
+              "startTimeUnixNano": "1726902784907138333",
+              "durationNanos": "190368459",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "456d179a25521ebd464bf9c86eb0fdef",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902783740928000",
+      "durationMs": 659,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "c75d068dba8c2c47",
+            "startTimeUnixNano": "1726902783740952834",
+            "durationNanos": "164057000",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "512b337822203a7d",
+            "startTimeUnixNano": "1726902783905029875",
+            "durationNanos": "278176625",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "f80c189d10c81fcf",
+            "startTimeUnixNano": "1726902784183238334",
+            "durationNanos": "216682916",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "c75d068dba8c2c47",
+              "startTimeUnixNano": "1726902783740952834",
+              "durationNanos": "164057000",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "512b337822203a7d",
+              "startTimeUnixNano": "1726902783905029875",
+              "durationNanos": "278176625",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "f80c189d10c81fcf",
+              "startTimeUnixNano": "1726902784183238334",
+              "durationNanos": "216682916",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "e45c984790057b0f299d0d100cd1dc37",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902783019153000",
+      "durationMs": 721,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "288ee97849040bd0",
+            "startTimeUnixNano": "1726902783019196208",
+            "durationNanos": "291926500",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "689f46b1a255334e",
+            "startTimeUnixNano": "1726902783311166333",
+            "durationNanos": "194730500",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "70668bf9b76d0138",
+            "startTimeUnixNano": "1726902783505924416",
+            "durationNanos": "234965209",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "288ee97849040bd0",
+              "startTimeUnixNano": "1726902783019196208",
+              "durationNanos": "291926500",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "689f46b1a255334e",
+              "startTimeUnixNano": "1726902783311166333",
+              "durationNanos": "194730500",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "70668bf9b76d0138",
+              "startTimeUnixNano": "1726902783505924416",
+              "durationNanos": "234965209",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "927edb2ca6175e1cc9f3d81874f8f2b0",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902782287070000",
+      "durationMs": 732,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "d1c7e7f555d9ceb2",
+            "startTimeUnixNano": "1726902782287123250",
+            "durationNanos": "271791333",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "e6d5c26e5f19441f",
+            "startTimeUnixNano": "1726902782558959166",
+            "durationNanos": "182446542",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "7f12a0f33fa365ee",
+            "startTimeUnixNano": "1726902782741444208",
+            "durationNanos": "277652542",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "d1c7e7f555d9ceb2",
+              "startTimeUnixNano": "1726902782287123250",
+              "durationNanos": "271791333",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "e6d5c26e5f19441f",
+              "startTimeUnixNano": "1726902782558959166",
+              "durationNanos": "182446542",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "7f12a0f33fa365ee",
+              "startTimeUnixNano": "1726902782741444208",
+              "durationNanos": "277652542",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "2de1425d6cff663a39c4d05db111db76",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902781562456000",
+      "durationMs": 724,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "668def546d22397c",
+            "startTimeUnixNano": "1726902781562479292",
+            "durationNanos": "246393875",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "4754ecf0a1b2909f",
+            "startTimeUnixNano": "1726902781808915417",
+            "durationNanos": "191680125",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "87e475e31000afb3",
+            "startTimeUnixNano": "1726902782000649167",
+            "durationNanos": "286359750",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "668def546d22397c",
+              "startTimeUnixNano": "1726902781562479292",
+              "durationNanos": "246393875",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "4754ecf0a1b2909f",
+              "startTimeUnixNano": "1726902781808915417",
+              "durationNanos": "191680125",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "87e475e31000afb3",
+              "startTimeUnixNano": "1726902782000649167",
+              "durationNanos": "286359750",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "cdcbc8c02273080a49be35e516988fcd",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902780828063000",
+      "durationMs": 734,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "75eb13aa80f4dac4",
+            "startTimeUnixNano": "1726902780828110458",
+            "durationNanos": "286812834",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "83f69774fb8024e9",
+            "startTimeUnixNano": "1726902781114964917",
+            "durationNanos": "181997916",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "b935c1eb2bbc7e8d",
+            "startTimeUnixNano": "1726902781296991292",
+            "durationNanos": "265426916",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "75eb13aa80f4dac4",
+              "startTimeUnixNano": "1726902780828110458",
+              "durationNanos": "286812834",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "83f69774fb8024e9",
+              "startTimeUnixNano": "1726902781114964917",
+              "durationNanos": "181997916",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "b935c1eb2bbc7e8d",
+              "startTimeUnixNano": "1726902781296991292",
+              "durationNanos": "265426916",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "1bc70f27c48440a4e73adb28d715e944",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902780148557000",
+      "durationMs": 679,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "776a99da9d763580",
+            "startTimeUnixNano": "1726902780148610500",
+            "durationNanos": "199511833",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "9776d3650c664fc6",
+            "startTimeUnixNano": "1726902780348164583",
+            "durationNanos": "220518917",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "52d7f8da9093facb",
+            "startTimeUnixNano": "1726902780568722166",
+            "durationNanos": "259281459",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "776a99da9d763580",
+              "startTimeUnixNano": "1726902780148610500",
+              "durationNanos": "199511833",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "9776d3650c664fc6",
+              "startTimeUnixNano": "1726902780348164583",
+              "durationNanos": "220518917",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "52d7f8da9093facb",
+              "startTimeUnixNano": "1726902780568722166",
+              "durationNanos": "259281459",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "271ed59517c5aafd59afdf1203161a3d",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902779354735000",
+      "durationMs": 793,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "a004188cd7d3f88a",
+            "startTimeUnixNano": "1726902779354785167",
+            "durationNanos": "289376833",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "e294e014b9cb339b",
+            "startTimeUnixNano": "1726902779644217583",
+            "durationNanos": "291180000",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "d661b8b710724c2b",
+            "startTimeUnixNano": "1726902779935415792",
+            "durationNanos": "213064291",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "a004188cd7d3f88a",
+              "startTimeUnixNano": "1726902779354785167",
+              "durationNanos": "289376833",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "e294e014b9cb339b",
+              "startTimeUnixNano": "1726902779644217583",
+              "durationNanos": "291180000",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "d661b8b710724c2b",
+              "startTimeUnixNano": "1726902779935415792",
+              "durationNanos": "213064291",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "b56211b32127a0ebba1b88cd5244f6b",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902778660541000",
+      "durationMs": 694,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "7812439429e317ed",
+            "startTimeUnixNano": "1726902778660565625",
+            "durationNanos": "228027959",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "6363cd805b2e21e6",
+            "startTimeUnixNano": "1726902778888615250",
+            "durationNanos": "299114834",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "681c10d2d484220e",
+            "startTimeUnixNano": "1726902779187759209",
+            "durationNanos": "166918625",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "7812439429e317ed",
+              "startTimeUnixNano": "1726902778660565625",
+              "durationNanos": "228027959",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "6363cd805b2e21e6",
+              "startTimeUnixNano": "1726902778888615250",
+              "durationNanos": "299114834",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "681c10d2d484220e",
+              "startTimeUnixNano": "1726902779187759209",
+              "durationNanos": "166918625",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "791d76af2beda7ff97014f0c2efbc2d",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902778065079000",
+      "durationMs": 595,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "f449bc955aeafed9",
+            "startTimeUnixNano": "1726902778065136084",
+            "durationNanos": "197353541",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "46f540cc578a05c6",
+            "startTimeUnixNano": "1726902778262532125",
+            "durationNanos": "212695959",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "e7b05204d6bfd739",
+            "startTimeUnixNano": "1726902778475262334",
+            "durationNanos": "185243833",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 4
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "f449bc955aeafed9",
+              "startTimeUnixNano": "1726902778065136084",
+              "durationNanos": "197353541",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "46f540cc578a05c6",
+              "startTimeUnixNano": "1726902778262532125",
+              "durationNanos": "212695959",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "e7b05204d6bfd739",
+              "startTimeUnixNano": "1726902778475262334",
+              "durationNanos": "185243833",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 4
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 4
+        }
+      }
+    },
+    {
+      "traceID": "8dd68d34b19050dd0a164a380491bd0f",
+      "rootServiceName": "xag-test",
+      "rootTraceName": "reasoning_cycle",
+      "startTimeUnixNano": "1726902777314342000",
+      "durationMs": 750,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "c159ef271080e11c",
+            "startTimeUnixNano": "1726902777803398292",
+            "durationNanos": "261632292",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          },
+          {
+            "spanID": "a124e2527026dcb4",
+            "startTimeUnixNano": "1726902777314342000",
+            "durationNanos": "750698084",
+            "attributes": [
+              {
+                "key": "service.name",
+                "value": {
+                  "stringValue": "xag-test"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 2
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "c159ef271080e11c",
+              "startTimeUnixNano": "1726902777803398292",
+              "durationNanos": "261632292",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            },
+            {
+              "spanID": "a124e2527026dcb4",
+              "startTimeUnixNano": "1726902777314342000",
+              "durationNanos": "750698084",
+              "attributes": [
+                {
+                  "key": "service.name",
+                  "value": {
+                    "stringValue": "xag-test"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 2
+        }
+      ],
+      "serviceStats": {
+        "xag-test": {
+          "spanCount": 2
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "inspectedBytes": "222896",
+    "completedJobs": 1,
+    "totalJobs": 1
+  }
+}
