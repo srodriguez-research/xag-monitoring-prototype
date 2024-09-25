@@ -59,6 +59,14 @@ services:
     depends_on:
       - tempo
 
+  loki:
+    image: grafana/loki:main
+    ports:
+      - "3100:3100"
+    volumes:
+      - ./configs/loki-config.yaml:/etc/loki/local-config.yaml
+    command: -config.file=/etc/loki/local-config.yaml
+
   prometheus:
     image: prom/prometheus:latest
     command:
