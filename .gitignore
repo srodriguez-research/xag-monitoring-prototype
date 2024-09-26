@@ -1,6 +1,7 @@
 
 # Tempo data
 tempo-data/
+data/
 
 
 # extension of file serialized xag events
