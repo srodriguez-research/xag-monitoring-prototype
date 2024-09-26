@@ -10,7 +10,7 @@ services:
       - "10001:10001"
       - "/var/tempo"
     volumes:
-      - ./tempo-data:/var/tempo
+      - ./data/tempo-data:/var/tempo
 
   memcached:
     image: memcached:1.6.29
@@ -38,7 +38,7 @@ services:
     command: [ "-config.file=/etc/tempo.yaml" ]
     volumes:
       - ./tempo.yaml:/etc/tempo.yaml
-      - ./tempo-data:/var/tempo
+      - ./data/tempo-data:/var/tempo
     ports:
       - "14268:14268"  # jaeger ingest
       - "3200:3200"   # tempo

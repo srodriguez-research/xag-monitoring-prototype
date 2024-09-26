@@ -3,7 +3,7 @@
 ## Running
 
 ```shell
-mkdir tempo-data
+mkdir -p data/tempo-data
 docker compose up -d
 open http://localhost:3000/explore
 docker compose down -v 
@@ -18,14 +18,16 @@ docker compose down -v
 
 ```shell
 
-poetry run behave
+poetry shell
+behave --no-capture -D trace=data/traces_store/1368ab4fde5b47e9756b85726803ed91 
 ```
 
 Editing with vim
 ```
 source $(poetry env info --path)/bin/activate
 ```
-
+### Reports
+`brew install allure`
 
 ## References
 
