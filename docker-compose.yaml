@@ -37,7 +37,7 @@ services:
     image: *tempoImage
     command: [ "-config.file=/etc/tempo.yaml" ]
     volumes:
-      - ./tempo.yaml:/etc/tempo.yaml
+      - ./configs/tempo.yaml:/etc/tempo.yaml
       - ./data/tempo-data:/var/tempo
     ports:
       - "14268:14268"  # jaeger ingest

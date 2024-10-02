@@ -1,4 +1,6 @@
-# Opentelemetry instrumentation 
+# Monitoring and Verification of Explainable Agents 
+
+This repository is provided as part of our work for AAMAS 2025
 
 ## Running
 
@@ -14,10 +16,9 @@ docker compose down -v
 `tempo-data` stores all data for local use only.
 
 
-# Running python
+### Running monitoring system locally on single trace
 
 ```shell
-
 poetry shell
 behave --no-capture -D trace=data/traces_store/1368ab4fde5b47e9756b85726803ed91 
 ```
@@ -26,24 +27,28 @@ Editing with vim
 ```
 source $(poetry env info --path)/bin/activate
 ```
+
 ### Reports
+Intall allure
 `brew install allure`
 
-## References
+# Querying Tempo directly
+
+Get a single trace by id:
+
+```
+TRACE_ID=f92b7616e40843b75c5ee7cfba5553e7
+curl -G -s http://localhost:3200/api/v2/traces/$TRACE_ID | jq
+```
+
+Search traces by service name:
+```
+# Get traces with error status
+# TRACEQL="{status=error}"
+
+SERV_NAME=coffee-mock
+TRACEQL="{resource.service.name=\"$SERV_NAME\"}"
 
 
-### Opentelemetry
-Libraries and SDKs:
- - https://github.com/open-telemetry/opentelemetry-java
-
-
-TODO: https://www.youtube.com/watch?v=Hink0jF8c28
-
-Tutorials, Videos and other References:
-- https://opentelemetry.io/docs/languages/java/instrumentation/
-- https://www.youtube.com/watch?v=hXTlV_RnELc and https://github.com/davidgeorgehope/custom-instrumentation-examples
-
-
-### Grafana Tempo
-
-- https://github.com/grafana/tempo/tree/main/example/docker-compose/local
+curl -G -s http://localhost:3200/api/search --data-urlencode "q=$TRACEQL" | jq
+```
