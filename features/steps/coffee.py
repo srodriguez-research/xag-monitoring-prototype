@@ -42,8 +42,8 @@ def step_impl(context: Context, plan):
         # Check if the plan in not the applicablePlans
         # then the engine FAILED to comply to requirements
         if plan not in context.span[f"xag.query.applicablePlans"]:
-            print(f"{context.trace=}")
-            print(f"{context.span=}")
+            # print(f"{context.trace=}")
+            # print(f"{context.span=}")
             context.logger.critical(
                 f"Failed to verify story={context.feature.name} for traceId={context.trace["traceId"]} in spanId={context.span["spanId"]}",
                 extra=build_context_tags(context),
