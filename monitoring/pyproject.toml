@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "tempo-spans-test"
+name = "uss"
 version = "0.1.0"
 description = ""
 authors = ["Sebastian RODRIGUEZ <sebastian.rodriguez@rmit.edu.au>"]

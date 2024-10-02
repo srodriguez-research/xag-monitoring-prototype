@@ -11,7 +11,6 @@ def verify_trace(trace_file):
     command = f"behave --no-capture -D trace={trace_file}"
     workdir = os.getcwd()
     logging.debug(f"Running behave as subprocess [{command=}, {workdir=}")
-    # s = subprocess.run(cmd, check=False)
 
     result = subprocess.run(
         command.split(),
