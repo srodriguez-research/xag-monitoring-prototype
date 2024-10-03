@@ -2,6 +2,14 @@
 
 This repository is provided as part of our work for AAMAS 2025
 
+## Configuration
+
+In the docker compose file for the monitor service
+
+```
+      - SERVICE_NAME=coffee-mock
+```
+
 ## Running
 
 ```shell
@@ -46,8 +54,8 @@ Search traces by service name:
 # Get traces with error status
 # TRACEQL="{status=error}"
 
-SERV_NAME=coffee-mock
-TRACEQL="{resource.service.name=\"$SERV_NAME\"}"
+export SERV_NAME=coffee-mock
+export TRACEQL="{resource.service.name=\"$SERV_NAME\"}"
 
 
 curl -G -s http://localhost:3200/api/search --data-urlencode "q=$TRACEQL" | jq
