@@ -13,6 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
+    <opentelemetry.version>2.8.0</opentelemetry.version>
   </properties>
 
   <dependencyManagement>
@@ -41,7 +42,12 @@
       <groupId>io.opentelemetry</groupId>
       <artifactId>opentelemetry-api</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>io.opentelemetry.javaagent</groupId>
+      <artifactId>opentelemetry-javaagent</artifactId>
+      <version>${opentelemetry.version}</version>
+      <scope>provided</scope>
+    </dependency>
     <!-- Testing -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -81,6 +87,34 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <!-- download-opentelemetry-javaagent automatically -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.8.0</version>
+        <executions>
+          <execution>
+            <id>copy</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <artifactItems>
+            <artifactItem>
+              <groupId>io.opentelemetry.javaagent</groupId>
+              <artifactId>opentelemetry-javaagent</artifactId>
+              <version>${opentelemetry.version}</version>
+              <type>jar</type>
+              <overWrite>false</overWrite>
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <destFileName>opentelemetry-javaagent.jar</destFileName>
+            </artifactItem>
+          </artifactItems>
+        </configuration>
       </plugin>
     </plugins>
   </build>
