@@ -1,0 +1,4 @@
+[behave]
+outfiles=data/reports
+stdout_capture=false
+format=allure_behave.formatter:AllureFormatter
