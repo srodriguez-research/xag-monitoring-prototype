@@ -1,5 +1,29 @@
 services:
 
+  # monitor:
+  #   build: ./monitoring/
+  #   environment:
+  #     - SERVICE_NAME=coffee-mock
+  #     - TEMPO_URL=http://tempo:3200/api
+  #
+  #   volumes:
+  #     - ./applications/coffee/features:/app/features
+  #     - ./data/traces_store:/app/data/traces_store
+  #     - ./data/reports:/app/data/reports
+  #   depends_on:
+  #     - tempo
+  #
+  # allure:
+  #   image: "frankescobar/allure-docker-service"
+  #   environment:
+  #     CHECK_RESULTS_EVERY_SECONDS: 1
+  #     KEEP_HISTORY: 1
+  #   ports:
+  #     - "5050:5050"
+  #   volumes:
+  #     - ./data/reports:/app/allure-results
+  #     # - ${PWD}/allure-reports:/app/default-reports
+
   # Tempo runs as user 10001, and docker compose creates the volume as root.
   # As such, we need to chown the volume in order for Tempo to start correctly.
   init:
@@ -21,17 +45,6 @@ services:
       - MEMCACHED_MAX_MEMORY=64m  # Set the maximum memory usage
       - MEMCACHED_THREADS=4       # Number of threads to use
 
-  # otel-collector:
-  #   platform: linux/amd64
-  #   image: otel/opentelemetry-collector:0.25.0
-  #   ports:
-  #     - "6831:6831"
-  #     - "14268:14268"
-  #     - "4317:4317"
-  #   volumes:
-  #     - ./config/otel-collector.yaml:/config/otel-collector.yaml
-  #   command:
-  #     - --config=/config/otel-collector.yaml
 
   tempo:
     image: *tempoImage
