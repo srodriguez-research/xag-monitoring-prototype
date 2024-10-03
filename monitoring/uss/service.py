@@ -6,6 +6,8 @@ from pathlib import Path
 
 from uss.tempo import get_trace, search_tempo
 
+SERVICE_NAME = os.environ["SERVICE_NAME"]
+
 
 def verify_trace(trace_file):
     command = f"behave --no-capture -D trace={trace_file}"
@@ -25,8 +27,7 @@ def verify_trace(trace_file):
 def monitor_traces():
     store_dir = Path("data/traces_store")
     store_dir.mkdir(parents=True, exist_ok=True)
-    SERV_NAME = "xag-test"
-    traceql = "{" + f'resource.service.name="{SERV_NAME}"' + "}"
+    traceql = "{" + f'resource.service.name="{SERVICE_NAME}"' + "}"
     search = search_tempo(traceql)
     traces = search["traces"]
     for trace in traces:

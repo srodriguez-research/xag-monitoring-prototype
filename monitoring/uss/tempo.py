@@ -1,10 +1,12 @@
 import base64
 import json
+import os
 
 import requests
 
 # URL of the API
-TEMPO_URL = "http://localhost:3200/api"
+TEMPO_URL_DEFAULT = "http://localhost:3200/api"
+TEMPO_URL = os.environ.get("TEMPO_URL", TEMPO_URL_DEFAULT)
 
 
 def search_tempo(traceql) -> dict:
