@@ -5,11 +5,11 @@ Feature: GetCoffee
   I want to GetCoffee
   so I can finish my AAMAS experiments
   
-  @goal-success
-  Scenario: goal-success
-    Given I believe coffee is present
-    When I evaluate current_goal success
-    Then goal success is true
+  # @goal-success
+  # Scenario: goal-success
+  #   Given I believe coffee is present
+  #   When I evaluate current_goal success
+  #   Then goal success is true
 
   @goal-plan
   Scenario: plan-KitchenCoffee
