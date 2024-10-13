@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "explainer"
+version = "0.1.0"
+description = ""
+authors = ["Sebastian RODRIGUEZ <sebastian.rodriguez@rmit.edu.au>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.0.3"
+behave = "^1.2.6"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.basedpyright]
+typeCheckingMode = "standard"
+
+
