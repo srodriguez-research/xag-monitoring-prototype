@@ -1,9 +1,12 @@
+import json
 import os
 
 from behave import parser
 from behave.model import Feature, Scenario, Step
 from dotenv import load_dotenv
 from flask import Flask, render_template
+
+from uss.tempo import parse_trace_json
 
 app = Flask(__name__)
 
@@ -14,11 +17,9 @@ TRACES_DIR = os.getenv("TRACES_DIR")
 
 
 @app.route("/")
-def explain_trace():
-    trace_id = ""
-    # tracefile = os.path.join(TRACES_DIR, trace_id)
-
-    # parse the trace to get spans
+def explain_plan_selection():
+    trace_id = "trace.json"
+    tracefile = os.path.join(TRACES_DIR, trace_id)
 
     # Select span with plan revision
 
@@ -27,8 +28,30 @@ def explain_trace():
     feature_text = open(feature_file).read()
     feature: Feature = parser.parse_file(feature_file)
     scenario: Scenario = feature.scenarios[0]
-    scenario_text = ""
 
+    beliefs = {"haveMoney": False, "staffCardAvailable": True, "annInOffice": False}
+
+    # debug = False
+    debug = False
+    # parse the trace to get spans
+    spans = parse_trace_json(tracefile)
+    # process_to_find = "PLAN_REVISION"
+    # process_to_find = "PLAN_SELECTION"
+    process_to_find = "PLAN_META_RATING"
+    # process_to_find = "PLAN_RATING"
+    # span = next(s for s in spans["spans"] if s["name"] == process_to_find)
+    span = [s for s in spans["spans"] if s["name"] == process_to_find]
+    span = json.dumps(span, indent=2)
+    # span = ""
+
+    selected_plan = "KitchenCoffee"
     return render_template(
-        "explain_trace.html", scenario=scenario, feature_text=feature_text
+        "explain_plan_selection.html",
+        span=span,
+        spans=spans,
+        selected_plan=selected_plan,
+        beliefs=beliefs,
+        scenario=scenario,
+        feature_text=feature_text,
+        debug=debug,
     )

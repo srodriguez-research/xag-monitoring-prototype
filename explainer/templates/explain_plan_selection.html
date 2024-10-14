@@ -16,13 +16,15 @@
         <!-- Syntax highlight  -->
         <!-- ---------------------------- -->
 
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"> -->
         <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+                href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
         <!-- and it's easy to individually load additional languages -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/gherkin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
 
         <script>hljs.highlightAll();</script>
 </head>
@@ -30,19 +32,30 @@
 <body>
 
         <main class="container">
-                <h1>Why bad coffee?</h1>
+                <h1>Explain Plan Selection</h1>
+
+                <h2>Why did you select {{selected_plan}}?</h2>
 
 
+                <p>In that moment, I believed that</p>
+                <ul>
+                        {%for bel in beliefs:%}
+                        <li>
+                                {{bel}} was {{beliefs[bel]}}
+                        </li>
+                        {%endfor %}
+                </ul>
 
-                <h2>Belief state</h2>
-                <p>In this moment, agent believed that</p>
-                {%for bel in beliefs:%}
-                {{bel.name}} was {{bel.value}}
-                {%endfor %}
-                <h2>Scenario</h2>
-                Given scenario_name in
+                <p> And I applied the following criteria </p>
+
                 <pre> <code class="language-gherkin">{{feature_text}} </code> </pre>
 
+                {%if debug:%}
+
+                <pre> <code class="language-json">{{span}} </code> </pre>
+
+                <pre> <code class="language-json">{{spans}} </code> </pre>
+                {%endif%}
         </main>
 </body>
 

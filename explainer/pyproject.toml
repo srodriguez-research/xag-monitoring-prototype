@@ -4,12 +4,15 @@ version = "0.1.0"
 description = ""
 authors = ["Sebastian RODRIGUEZ <sebastian.rodriguez@rmit.edu.au>"]
 readme = "README.md"
+packages = [{ include = "uss", from = "../monitoring/uss/" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 flask = "^3.0.3"
 behave = "^1.2.6"
 python-dotenv = "^1.0.1"
+# uss = [{path = "../monitoring/", develop = true}]
+requests = "^2.32.3"
 
 
 [build-system]
