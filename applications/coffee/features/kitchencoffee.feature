@@ -39,3 +39,8 @@ Feature: Get Kitchen Coffee
     Then I do action obatainCoffee
     # changed GetCoffee(Kitchen) to obatainCoffee to avoid confusion
 
+  @plan-valueings
+  Scenario: valueings
+    When plan is rated
+    Then future value of coffee.quality is expected to be BAD
+    And future value of cost is expected to be None
