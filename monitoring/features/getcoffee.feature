@@ -22,23 +22,23 @@ Feature: GetCoffee
     When I adopt the GetCoffee goal
     Then plan ShopCoffee is applicable
 
-  @goal-preference
-  Scenario: pref-quality
-    Given I could have OfficeCoffee  with coffee.quality GOOD for cost None
-    And I could have ShopCoffee with coffee.quality VERY_GOOD for cost HIGH
+  @goal-plan-preference @rating
+  Scenario Outline: plan-rating
+    Given I have an applicable plan with coffee.quality <quality>
+    And cost <cost>
     When I select the plan
-    Then I select ShopCoffee
-
-  @goal-preference
-  Scenario Outline: pref-quality
-    Given I have <option1> with coffee.quality <quality1> for cost <cost1>
-    And I have <option2 > coffee.quality <quality2> for cost <cost2>
-    When I select the plan
-    Then I select <result>
+    Then I rate it with <rate>
+    And I select the highest-rated plan
 
     Examples:
-      | option1    | quality1  | price1 | option2      | quality2 | price2 | result     | 
-      | ShopCoffee | VERY_GOOD | HIGH   | OfficeCoffee | GOOD     | None   | ShopCoffee | 
+      | quality   | cost | rate |
+      | VERY_GOOD | None | 1.0  |
+      | VERY_GOOD | High | 0.7  |
+      | GOOD      | None | 0.6  |
+      | GOOD      | High | 0.4  |
+      | BAD       | None | 0.3  |
+      | BAD       | High | 0.2  |
+
 
   @goal-success
   Scenario: goal-success
