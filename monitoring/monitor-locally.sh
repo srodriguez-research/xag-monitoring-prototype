@@ -3,4 +3,7 @@
 export SERVICE_NAME=coffee-sarl
 export TEMPO_URL=http://localhost:3200/api
 
+export TRACES_DIR=data/traces_store
+export REPORTS_DIR=data/reports
+
 poetry run python monitor.py

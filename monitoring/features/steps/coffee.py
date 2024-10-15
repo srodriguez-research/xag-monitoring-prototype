@@ -4,19 +4,7 @@ from behave import *  # pylint: disable=wildcard-import
 from behave.runner import Context
 
 from features.environment import pprint
-from uss.loki import build_tags
 from uss.tempo import array_to_dict_by
-
-
-def build_context_tags(context: Context) -> dict:
-    context_tags = {
-        "feature": context.feature.name,
-        "scenario": context.scenario.name,
-        "step": context.step.name,
-        "traceId": context.trace["traceId"],  # Not sure this is the best way to link
-        "spanId": context.span["spanId"],  # Not sure this is the best way to link
-    }
-    return build_tags(context_tags)
 
 
 @given("I believe {belief} is {value}")
@@ -80,11 +68,7 @@ def step_impl_applicable(context: Context, plan):
     rating = result["rating"]
     failed_msg = f"Failed to verify story={context.feature.name} scenario={context.scenario.name} for traceId={context.trace["traceId"]} in spanId={context.span["spanId"]}"
     if rating <= 0:
-        context.logger.critical(
-            failed_msg,
-            extra=build_context_tags(context),
-        )
-    assert rating > 0, failed_msg
+        fail_scenario(context, failed_msg)
 
 
 @then("I rate it with {rating}")
@@ -97,12 +81,7 @@ def step_impl_rate(context, rating):
             f"rating for plan {plan['plan']} is {plan['rating']} but should be {rating}"
         )
         if plan["rating"] != rating:
-            context.logger.critical(
-                failed_msg,
-                extra=build_context_tags(context),
-            )
-            pprint(plan)
-        assert plan["rating"] == rating, failed_msg
+            fail_scenario(context, failed_msg)
 
 
 @then("goal success is true")
@@ -135,3 +114,8 @@ def step_impl_current_goal(context):
 @when("I select the plan")
 def step_impl_select_plan(context):
     pass
+
+
+def fail_scenario(context, msg):
+    context.scenario.failed_message = msg
+    raise AssertionError(msg)

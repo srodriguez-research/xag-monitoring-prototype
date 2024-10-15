@@ -2,10 +2,11 @@ import json
 import logging
 
 import logging_loki
-from behave.model import Scenario
+from behave.model import Scenario, Status
 from behave.runner import Context
 
-from uss.tempo import array_to_dict_by, parse_trace_json
+from uss.loki import build_tags
+from uss.tempo import parse_trace_json
 
 
 def get_logger():
@@ -29,28 +30,29 @@ def before_all(context):
     # Get the trace to verify from cli
     trace_file = context.config.userdata["trace"]
     logging.debug(f"behave starting verification of trace {trace_file}")
+
     if trace_file == None:
         raise Exception("Must provide a trace to parse ")
     trace = parse_trace_json(trace_file)
-    # print("#########################################")
-    # pprint(trace)
-    # print("#########################################")
 
     logging.debug(f"behave trace {trace_file} parsing complete")
     context.trace = trace
+    context.trace_id = context.trace["traceId"]
+    context.explainer_url = f"http://localhost:5000/{context.trace_id}"
 
-    logger.info(f"Starting verification of traceId={trace['traceId']}")
+    logger.debug(f"Starting verification of traceId={trace['traceId']}")
     context.logger = logger
 
 
 def before_feature(context, feature):
-    context.logger.info(f"Starting verification of trace")
+    pass
 
 
 def before_scenario(context, scenario: Scenario):
     context.given_applies = True
     context.xag_process = "TBC"
     context.span = None
+    scenario.failed_message = None
 
     # Find the correct process to verify this scenario
     if any(t for t in scenario.tags if t == "goal-plan"):
@@ -68,12 +70,47 @@ def before_scenario(context, scenario: Scenario):
         )
         return
 
-    context.logger.info(f"Starting verification of trace")
+    context.logger.debug(f"Starting verification of trace")
 
 
 # set the current step to log it later as part of the tags
 def before_step(context, step):
     context.step = step
+
+
+def build_context_tags(context: Context) -> dict:
+    context_tags = {
+        "feature": context.feature.name,
+        "scenario": context.scenario.name,
+        # "traceId": context.trace["traceId"],  # Not sure this is the best way to link
+        # "spanId": context.span["spanId"],  # Not sure this is the best way to link
+        "verification": "FAILED" if context.failed else "PASSED",
+        # "explanation": context.explainer_url,
+    }
+    return build_tags(context_tags)
+
+
+def after_scenario(context, scenario):
+    infomsg = f"story={context.feature.name} scenario={context.scenario.name} for traceId={context.trace["traceId"]} in spanId={context.span["spanId"]}"
+    explainmsg = f"Explanation: {context.explainer_url}"
+
+    match scenario.status:
+        case Status.failed:
+            msg = f"FAILED verification {infomsg}"
+            msg = f"{msg}\n Reason: {scenario.failed_message}"
+            msg = f"{msg}\n {explainmsg}"
+            context.logger.critical(
+                msg,
+                extra=build_context_tags(context),
+            )
+
+        case _:
+            msg = f"{scenario.status.name.upper()} verification {infomsg}"
+            msg = f"{msg}\n {explainmsg}"
+            context.logger.info(
+                msg,
+                extra=build_context_tags(context),
+            )
 
 
 def find_span(context: Context, scenario: Scenario):
