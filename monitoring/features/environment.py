@@ -82,10 +82,10 @@ def build_context_tags(context: Context) -> dict:
     context_tags = {
         "feature": context.feature.name,
         "scenario": context.scenario.name,
+        "feature_status": context.feature.status.name.upper(),
+        "scenario_status": context.scenario.status.name.upper(),
         # "traceId": context.trace["traceId"],  # Not sure this is the best way to link
         # "spanId": context.span["spanId"],  # Not sure this is the best way to link
-        "verification": "FAILED" if context.failed else "PASSED",
-        # "explanation": context.explainer_url,
     }
     return build_tags(context_tags)
 

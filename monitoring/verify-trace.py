@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 
 import coloredlogs
 
@@ -14,4 +15,6 @@ if __name__ == "__main__":
     )
     parser.add_argument("trace_filename")
     args = parser.parse_args()
-    verify_trace(args.trace_filename)
+    trace_file = args.trace_filename
+    tracename = Path(trace_file).name
+    verify_trace(trace_file, f"data/reports/{tracename}-report.json")

@@ -1,0 +1,690 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "GetCoffee",
+    "tags": [
+      "goal"
+    ],
+    "location": "features/getcoffee.feature:2",
+    "status": "failed",
+    "description": [
+      "As researcher,",
+      "I want to GetCoffee",
+      "so I can finish my AAMAS experiments"
+    ],
+    "elements": [
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "plan-kitchencoffee",
+        "tags": [
+          "goal-plan"
+        ],
+        "location": "features/getcoffee.feature:8",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I believe staffCardAvailable is true",
+            "location": "features/getcoffee.feature:9",
+            "match": {
+              "location": "features/steps/coffee.py:10",
+              "arguments": [
+                {
+                  "value": "staffCardAvailable",
+                  "name": "belief"
+                },
+                {
+                  "value": "true",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.8848648071289062e-05
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I adopt the GetCoffee goal",
+            "location": "features/getcoffee.feature:10",
+            "match": {
+              "location": "features/steps/coffee.py:104",
+              "arguments": [
+                {
+                  "value": "GetCoffee",
+                  "name": "goal"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.3126602172851562e-05
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "plan KitchenCoffee is applicable",
+            "location": "features/getcoffee.feature:11",
+            "match": {
+              "location": "features/steps/coffee.py:61",
+              "arguments": [
+                {
+                  "value": "KitchenCoffee",
+                  "name": "plan"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3.0994415283203125e-05
+            }
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "plan-officecoffee",
+        "tags": [
+          "goal-plan"
+        ],
+        "location": "features/getcoffee.feature:14",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I believe annInOffice is true",
+            "location": "features/getcoffee.feature:15",
+            "match": {
+              "location": "features/steps/coffee.py:10",
+              "arguments": [
+                {
+                  "value": "annInOffice",
+                  "name": "belief"
+                },
+                {
+                  "value": "true",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0.000125885009765625
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I adopt the GetCoffee goal",
+            "location": "features/getcoffee.feature:16"
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "plan OfficeCoffee is applicable",
+            "location": "features/getcoffee.feature:17"
+          }
+        ],
+        "status": "skipped"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "plan-shopcoffee",
+        "tags": [
+          "goal-plan"
+        ],
+        "location": "features/getcoffee.feature:20",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I believe haveMoney is true",
+            "location": "features/getcoffee.feature:21",
+            "match": {
+              "location": "features/steps/coffee.py:10",
+              "arguments": [
+                {
+                  "value": "haveMoney",
+                  "name": "belief"
+                },
+                {
+                  "value": "true",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.6226043701171875e-05
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I adopt the GetCoffee goal",
+            "location": "features/getcoffee.feature:22",
+            "match": {
+              "location": "features/steps/coffee.py:104",
+              "arguments": [
+                {
+                  "value": "GetCoffee",
+                  "name": "goal"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.288818359375e-05
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "plan ShopCoffee is applicable",
+            "location": "features/getcoffee.feature:23",
+            "match": {
+              "location": "features/steps/coffee.py:61",
+              "arguments": [
+                {
+                  "value": "ShopCoffee",
+                  "name": "plan"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3.62396240234375e-05
+            }
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "name": "plan-rating -- @1.1 ",
+        "tags": [
+          "goal-plan-preference",
+          "rating"
+        ],
+        "location": "features/getcoffee.feature:35",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing coffee.quality VERY_GOOD",
+            "location": "features/getcoffee.feature:27",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "coffee.quality",
+                  "name": "valuing"
+                },
+                {
+                  "value": "VERY_GOOD",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0.00012111663818359375
+            }
+          },
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing cost NONE",
+            "location": "features/getcoffee.feature:28",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "cost",
+                  "name": "valuing"
+                },
+                {
+                  "value": "NONE",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 8.487701416015625e-05
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I select the plan",
+            "location": "features/getcoffee.feature:29"
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I rate it with 1.0",
+            "location": "features/getcoffee.feature:30"
+          },
+          {
+            "keyword": "And",
+            "step_type": "then",
+            "name": "I select the highest-rated plan",
+            "location": "features/getcoffee.feature:31"
+          }
+        ],
+        "status": "skipped"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "name": "plan-rating -- @1.2 ",
+        "tags": [
+          "goal-plan-preference",
+          "rating"
+        ],
+        "location": "features/getcoffee.feature:36",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing coffee.quality VERY_GOOD",
+            "location": "features/getcoffee.feature:27",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "coffee.quality",
+                  "name": "valuing"
+                },
+                {
+                  "value": "VERY_GOOD",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7.677078247070312e-05
+            }
+          },
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing cost HIGH",
+            "location": "features/getcoffee.feature:28",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "cost",
+                  "name": "valuing"
+                },
+                {
+                  "value": "HIGH",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6.008148193359375e-05
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I select the plan",
+            "location": "features/getcoffee.feature:29",
+            "match": {
+              "location": "features/steps/coffee.py:114",
+              "arguments": []
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.384185791015625e-05
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I rate it with 0.7",
+            "location": "features/getcoffee.feature:30",
+            "match": {
+              "location": "features/steps/coffee.py:74",
+              "arguments": [
+                {
+                  "value": "0.7",
+                  "name": "rating"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.9087066650390625e-05
+            }
+          },
+          {
+            "keyword": "And",
+            "step_type": "then",
+            "name": "I select the highest-rated plan",
+            "location": "features/getcoffee.feature:31",
+            "match": {
+              "location": "features/steps/coffee.py:92",
+              "arguments": []
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.288818359375e-05
+            }
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "name": "plan-rating -- @1.3 ",
+        "tags": [
+          "goal-plan-preference",
+          "rating"
+        ],
+        "location": "features/getcoffee.feature:37",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing coffee.quality GOOD",
+            "location": "features/getcoffee.feature:27",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "coffee.quality",
+                  "name": "valuing"
+                },
+                {
+                  "value": "GOOD",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0.00010013580322265625
+            }
+          },
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing cost NONE",
+            "location": "features/getcoffee.feature:28"
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I select the plan",
+            "location": "features/getcoffee.feature:29"
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I rate it with 0.6",
+            "location": "features/getcoffee.feature:30"
+          },
+          {
+            "keyword": "And",
+            "step_type": "then",
+            "name": "I select the highest-rated plan",
+            "location": "features/getcoffee.feature:31"
+          }
+        ],
+        "status": "skipped"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "name": "plan-rating -- @1.4 ",
+        "tags": [
+          "goal-plan-preference",
+          "rating"
+        ],
+        "location": "features/getcoffee.feature:38",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing coffee.quality GOOD",
+            "location": "features/getcoffee.feature:27",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "coffee.quality",
+                  "name": "valuing"
+                },
+                {
+                  "value": "GOOD",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0.00010275840759277344
+            }
+          },
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing cost HIGH",
+            "location": "features/getcoffee.feature:28"
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I select the plan",
+            "location": "features/getcoffee.feature:29"
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I rate it with 0.4",
+            "location": "features/getcoffee.feature:30"
+          },
+          {
+            "keyword": "And",
+            "step_type": "then",
+            "name": "I select the highest-rated plan",
+            "location": "features/getcoffee.feature:31"
+          }
+        ],
+        "status": "skipped"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "name": "plan-rating -- @1.5 ",
+        "tags": [
+          "goal-plan-preference",
+          "rating"
+        ],
+        "location": "features/getcoffee.feature:39",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing coffee.quality BAD",
+            "location": "features/getcoffee.feature:27",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "coffee.quality",
+                  "name": "valuing"
+                },
+                {
+                  "value": "BAD",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7.605552673339844e-05
+            }
+          },
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing cost NONE",
+            "location": "features/getcoffee.feature:28",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "cost",
+                  "name": "valuing"
+                },
+                {
+                  "value": "NONE",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6.031990051269531e-05
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I select the plan",
+            "location": "features/getcoffee.feature:29",
+            "match": {
+              "location": "features/steps/coffee.py:114",
+              "arguments": []
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.288818359375e-05
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I rate it with 0.3",
+            "location": "features/getcoffee.feature:30",
+            "match": {
+              "location": "features/steps/coffee.py:74",
+              "arguments": [
+                {
+                  "value": "0.3",
+                  "name": "rating"
+                }
+              ]
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3.814697265625e-05,
+              "error_message": "Assertion Failed: rating for plan io.github.hmteams.xag.demos.coffee.GetKitchenCoffee is 0.4 but should be 0.3"
+            }
+          },
+          {
+            "keyword": "And",
+            "step_type": "then",
+            "name": "I select the highest-rated plan",
+            "location": "features/getcoffee.feature:31"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "name": "plan-rating -- @1.6 ",
+        "tags": [
+          "goal-plan-preference",
+          "rating"
+        ],
+        "location": "features/getcoffee.feature:40",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing coffee.quality BAD",
+            "location": "features/getcoffee.feature:27",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "coffee.quality",
+                  "name": "valuing"
+                },
+                {
+                  "value": "BAD",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0.00010085105895996094
+            }
+          },
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I have an applicable plan with valuing cost HIGH",
+            "location": "features/getcoffee.feature:28",
+            "match": {
+              "location": "features/steps/coffee.py:37",
+              "arguments": [
+                {
+                  "value": "cost",
+                  "name": "valuing"
+                },
+                {
+                  "value": "HIGH",
+                  "name": "value"
+                }
+              ]
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 9.608268737792969e-05
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I select the plan",
+            "location": "features/getcoffee.feature:29"
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I rate it with 0.2",
+            "location": "features/getcoffee.feature:30"
+          },
+          {
+            "keyword": "And",
+            "step_type": "then",
+            "name": "I select the highest-rated plan",
+            "location": "features/getcoffee.feature:31"
+          }
+        ],
+        "status": "skipped"
+      }
+    ]
+  }
+]

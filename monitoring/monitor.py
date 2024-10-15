@@ -1,5 +1,3 @@
-import logging
-
 import coloredlogs
 
 from uss.service import monitor_traces
