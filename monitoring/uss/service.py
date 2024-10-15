@@ -25,7 +25,7 @@ def verify_trace(trace_file):
 
 
 def monitor_traces():
-    store_dir = Path("data/traces_store")
+    store_dir = Path(os.environ("TRACES_DIR"))
     store_dir.mkdir(parents=True, exist_ok=True)
     traceql = "{" + f'resource.service.name="{SERVICE_NAME}"' + "}"
     search = search_tempo(traceql)

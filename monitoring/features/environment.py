@@ -56,6 +56,9 @@ def before_scenario(context, scenario: Scenario):
     if any(t for t in scenario.tags if t == "goal-plan"):
         context.xag_process = "PLAN_RATING"
 
+    if any(t for t in scenario.tags if t == "goal-plan-preference"):
+        context.xag_process = "PLAN_META_RATING"
+
     # Check if this scenario was used in the decision
     find_span(context, scenario)
 
@@ -75,10 +78,11 @@ def before_step(context, step):
 
 def find_span(context: Context, scenario: Scenario):
     all_spans = context.trace["spans"]
+    scenario_name = scenario.name.split("-- @", 1)[0].strip()
     found = list(
         filter(
             lambda x: x["name"] == context.xag_process
-            and scenario.name in x["xag.process.criteria.id"],
+            and scenario_name in x["xag.process.criteria.id"],
             all_spans,
         )
     )

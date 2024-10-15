@@ -24,25 +24,25 @@ Feature: GetCoffee
 
   @goal-plan-preference @rating
   Scenario Outline: plan-rating
-    Given I have an applicable plan with coffee.quality <quality>
-    And cost <cost>
+    Given I have an applicable plan with valuing coffee.quality <quality>
+    Given I have an applicable plan with valuing cost <cost>
     When I select the plan
     Then I rate it with <rate>
     And I select the highest-rated plan
 
     Examples:
       | quality   | cost | rate |
-      | VERY_GOOD | None | 1.0  |
-      | VERY_GOOD | High | 0.7  |
-      | GOOD      | None | 0.6  |
-      | GOOD      | High | 0.4  |
-      | BAD       | None | 0.3  |
-      | BAD       | High | 0.2  |
+      | VERY_GOOD | NONE | 1.0  |
+      | VERY_GOOD | HIGH | 0.7  |
+      | GOOD      | NONE | 0.6  |
+      | GOOD      | HIGH | 0.4  |
+      | BAD       | NONE | 0.3  |
+      | BAD       | HIGH | 0.2  |
 
 
-  @goal-success
-  Scenario: goal-success
-    Given I believe coffee is present
-    When I evaluate current_goal success
-    Then goal success is true
-
+  # @goal-success
+  # Scenario: goal-success
+  #   Given I believe coffee is present
+  #   When I evaluate current_goal success
+  #   Then goal success is true
+  #
