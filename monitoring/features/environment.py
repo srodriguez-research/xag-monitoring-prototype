@@ -52,6 +52,7 @@ def before_scenario(context, scenario: Scenario):
     context.given_applies = True
     context.xag_process = "TBC"
     context.span = None
+    context.span_id = None
     scenario.failed_message = None
 
     # Find the correct process to verify this scenario
@@ -80,9 +81,13 @@ def before_step(context, step):
 
 def build_context_tags(context: Context) -> dict:
     context_tags = {
-        "feature": context.feature.name,
+        "feature": context.feature.name if context.feature is not None else "None",
         "scenario": context.scenario.name,
-        "feature_status": context.feature.status.name.upper(),
+        "feature_status": (
+            context.feature.status.name.upper()
+            if context.feature is not None
+            else "None"
+        ),
         "scenario_status": context.scenario.status.name.upper(),
         # "traceId": context.trace["traceId"],  # Not sure this is the best way to link
         # "spanId": context.span["spanId"],  # Not sure this is the best way to link
@@ -90,8 +95,9 @@ def build_context_tags(context: Context) -> dict:
     return build_tags(context_tags)
 
 
-def after_scenario(context, scenario):
-    infomsg = f"story={context.feature.name} scenario={context.scenario.name} for traceId={context.trace["traceId"]} in spanId={context.span["spanId"]}"
+def after_scenario(context, scenario: Scenario):
+
+    infomsg = f"story={scenario.feature.name} scenario={scenario.name} for traceId={context.trace_id} in spanId={context.span_id}"
     explainmsg = f"Explanation: {context.explainer_url}"
 
     match scenario.status:
@@ -126,9 +132,14 @@ def find_span(context: Context, scenario: Scenario):
     # print("###################################")
     # print(f"Found for {scenario.name}")
     # pprint(found)
+    # FIXME: what happens when more than one apply!!?
+    # if len(found) > 0:
+    #     pprint(found)
+    #     assert False
 
     if len(found) == 1:
         context.span = found[0]
+        context.span_id = context.span["spanId"]
 
 
 def pprint(d):

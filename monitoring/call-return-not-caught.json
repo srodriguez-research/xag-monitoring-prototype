@@ -1,0 +1,251 @@
+[
+  {
+    "goal": {
+      "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+      "contextEvalution": true,
+      "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+      "owner": {
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+        "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+      },
+      "referenceCount": 0,
+      "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+    },
+    "plan": "io.github.hmteams.xag.demos.coffee.GetOfficeCoffee",
+    "rating": 0.2318519694821668,
+    "valuings": {
+      "coffee.quality": "GOOD",
+      "distanceTo(OFFICE)": 80,
+      "cost": "NONE"
+    },
+    "criteria": {
+      "coffee.quality": {
+        "VERY_GOOD": 1.0,
+        "GOOD": 0.6,
+        "BAD": 0.3
+      },
+      "cost": {
+        "HIGH": 0.7,
+        "LOW": 0.8,
+        "NONE": 1.0
+      },
+      "annInOffice": "annInOffice? 1:0"
+    },
+    "previousRating": {
+      "goal": {
+        "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+        "contextEvalution": true,
+        "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+        "owner": {
+          "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+          "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+        },
+        "referenceCount": 0,
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+      },
+      "plan": "io.github.hmteams.xag.demos.coffee.GetOfficeCoffee",
+      "rating": 0.0,
+      "valuings": {
+        "coffee.quality": "GOOD",
+        "distanceTo(OFFICE)": 80,
+        "cost": "NONE"
+      },
+      "criteria": {
+        "annInOffice": "annInOffice? 1:0"
+      },
+      "previousRating": null,
+      "previousRatingElement": null
+    },
+    "previousRatingElement": {
+      "goal": {
+        "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+        "contextEvalution": true,
+        "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+        "owner": {
+          "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+          "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+        },
+        "referenceCount": 0,
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+      },
+      "plan": "io.github.hmteams.xag.demos.coffee.GetOfficeCoffee",
+      "rating": 0.0,
+      "valuings": {
+        "coffee.quality": "GOOD",
+        "distanceTo(OFFICE)": 80,
+        "cost": "NONE"
+      },
+      "criteria": {
+        "annInOffice": "annInOffice? 1:0"
+      },
+      "previousRating": null,
+      "previousRatingElement": null
+    }
+  },
+  {
+    "goal": {
+      "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+      "contextEvalution": true,
+      "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+      "owner": {
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+        "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+      },
+      "referenceCount": 0,
+      "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+    },
+    "plan": "io.github.hmteams.xag.demos.coffee.GetKitchenCoffee",
+    "rating": 0.3,
+    "valuings": {
+      "coffee.quality": "BAD",
+      "cost": "NONE",
+      "distanceTo(KITCHEN)": 100
+    },
+    "criteria": {
+      "coffee.quality": {
+        "VERY_GOOD": 1.0,
+        "GOOD": 0.6,
+        "BAD": 0.3
+      },
+      "cost": {
+        "HIGH": 0.7,
+        "LOW": 0.8,
+        "NONE": 1.0
+      },
+      "staffCardAvailable": "staffCardAvailable? 1.0:0.0"
+    },
+    "previousRating": {
+      "goal": {
+        "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+        "contextEvalution": true,
+        "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+        "owner": {
+          "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+          "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+        },
+        "referenceCount": 0,
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+      },
+      "plan": "io.github.hmteams.xag.demos.coffee.GetKitchenCoffee",
+      "rating": 1.0,
+      "valuings": {
+        "coffee.quality": "BAD",
+        "cost": "NONE",
+        "distanceTo(KITCHEN)": 100
+      },
+      "criteria": {
+        "staffCardAvailable": "staffCardAvailable? 1.0:0.0"
+      },
+      "previousRating": null,
+      "previousRatingElement": null
+    },
+    "previousRatingElement": {
+      "goal": {
+        "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+        "contextEvalution": true,
+        "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+        "owner": {
+          "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+          "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+        },
+        "referenceCount": 0,
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+      },
+      "plan": "io.github.hmteams.xag.demos.coffee.GetKitchenCoffee",
+      "rating": 1.0,
+      "valuings": {
+        "coffee.quality": "BAD",
+        "cost": "NONE",
+        "distanceTo(KITCHEN)": 100
+      },
+      "criteria": {
+        "staffCardAvailable": "staffCardAvailable? 1.0:0.0"
+      },
+      "previousRating": null,
+      "previousRatingElement": null
+    }
+  },
+  {
+    "goal": {
+      "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+      "contextEvalution": true,
+      "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+      "owner": {
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+        "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+      },
+      "referenceCount": 0,
+      "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+    },
+    "plan": "io.github.hmteams.xag.demos.coffee.GetShopCoffee",
+    "rating": 0.0,
+    "valuings": {
+      "coffee.quality": "VERY_GOOD",
+      "cost": "HIGH",
+      "distanceTo(SHOP)": 0
+    },
+    "criteria": {
+      "coffee.quality": {
+        "VERY_GOOD": 1.0,
+        "GOOD": 0.6,
+        "BAD": 0.3
+      },
+      "haveMoney": "haveMoney? 1.0:0.0",
+      "cost": {
+        "HIGH": 0.7,
+        "LOW": 0.8,
+        "NONE": 1.0
+      }
+    },
+    "previousRating": {
+      "goal": {
+        "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+        "contextEvalution": true,
+        "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+        "owner": {
+          "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+          "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+        },
+        "referenceCount": 0,
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+      },
+      "plan": "io.github.hmteams.xag.demos.coffee.GetShopCoffee",
+      "rating": 0.0,
+      "valuings": {
+        "coffee.quality": "VERY_GOOD",
+        "cost": "HIGH",
+        "distanceTo(SHOP)": 0
+      },
+      "criteria": {
+        "haveMoney": "haveMoney? 1.0:0.0"
+      },
+      "previousRating": null,
+      "previousRatingElement": null
+    },
+    "previousRatingElement": {
+      "goal": {
+        "goalId": "0064a974-5f98-45eb-9a68-1419e572dc82",
+        "contextEvalution": true,
+        "goalClass": "io.github.hmteams.xag.demos.coffee.GetCoffee",
+        "owner": {
+          "id": "b11add84-1020-4a21-926a-66b35390e6b5",
+          "parentID": "2c38fb7f-f363-4f6e-877b-110b1f07cc77"
+        },
+        "referenceCount": 0,
+        "id": "b11add84-1020-4a21-926a-66b35390e6b5"
+      },
+      "plan": "io.github.hmteams.xag.demos.coffee.GetShopCoffee",
+      "rating": 0.0,
+      "valuings": {
+        "coffee.quality": "VERY_GOOD",
+        "cost": "HIGH",
+        "distanceTo(SHOP)": 0
+      },
+      "criteria": {
+        "haveMoney": "haveMoney? 1.0:0.0"
+      },
+      "previousRating": null,
+      "previousRatingElement": null
+    }
+  }
+]

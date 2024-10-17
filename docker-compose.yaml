@@ -80,6 +80,11 @@ services:
       - ./configs/loki-config.yaml:/etc/loki/local-config.yaml
     command: -config.file=/etc/loki/local-config.yaml
 
+  # prompushgateway:
+  #   image: prom/pushgateway
+  #   ports:
+  #    - "9091:9091"
+  #
   prometheus:
     image: prom/prometheus:latest
     command:

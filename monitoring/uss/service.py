@@ -4,12 +4,13 @@ import os
 import subprocess
 from pathlib import Path
 
-from prometheus_client import Counter
+from prometheus_client import Counter, start_http_server
 
 from uss.behave import *
 from uss.tempo import get_trace, search_tempo
 
 REPORTS_DIR = os.environ["REPORTS_DIR"]
+
 
 counters = {
     "passed": Counter("passed", "Scenarios Passed"),
@@ -35,6 +36,7 @@ def verify_trace(trace_file, report_file):
 
 
 def log_stats(report_file):
+
     report = parse_behave_report(report_file)
     scenarios = find_scenarios(report)
     count = count_scenarios_by_status(scenarios)
@@ -48,7 +50,8 @@ def monitor_traces():
     Path(REPORTS_DIR).mkdir(parents=True, exist_ok=True)
     store_dir = Path(TRACES_DIR)
     store_dir.mkdir(parents=True, exist_ok=True)
-    xag_process = "PLAN_META_RATING"
+    xag_process = "PLAN_RATING"
+
     traceql = (
         "{"
         + f'resource.service.name="{SERVICE_NAME}"'
@@ -69,4 +72,4 @@ def monitor_traces():
                 fp.close()
 
             verify_trace(trace_file=trace_store_path, report_file=trace_report_path)
-            # log_stats(report_file=trace_report_path)
+            log_stats(report_file=trace_report_path)

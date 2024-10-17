@@ -1,0 +1,464 @@
+{
+  "trace": {
+    "resourceSpans": [
+      {
+        "resource": {
+          "attributes": [
+            {
+              "key": "host.arch",
+              "value": {
+                "stringValue": "x86_64"
+              }
+            },
+            {
+              "key": "host.name",
+              "value": {
+                "stringValue": "MB14.local"
+              }
+            },
+            {
+              "key": "os.description",
+              "value": {
+                "stringValue": "Mac OS X 15.0"
+              }
+            },
+            {
+              "key": "os.type",
+              "value": {
+                "stringValue": "darwin"
+              }
+            },
+            {
+              "key": "process.command_line",
+              "value": {
+                "stringValue": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/bin/java -javaagent:/Users/srodriguez//Workspaces/SARL/libs/opentelemetry-javaagent.jar -Dfile.encoding=UTF-8 io.sarl.sre.boot.Boot --log=info --boot-type=default io.github.hmteams.xag.demos.coffee.CoffeeAddictAgent --"
+              }
+            },
+            {
+              "key": "process.executable.path",
+              "value": {
+                "stringValue": "/Library/Java/JavaVirtualMachines/temurin-8.jdk/Contents/Home/jre/bin/java"
+              }
+            },
+            {
+              "key": "process.pid",
+              "value": {
+                "intValue": "93196"
+              }
+            },
+            {
+              "key": "process.runtime.description",
+              "value": {
+                "stringValue": "Temurin OpenJDK 64-Bit Server VM 25.422-b05"
+              }
+            },
+            {
+              "key": "process.runtime.name",
+              "value": {
+                "stringValue": "OpenJDK Runtime Environment"
+              }
+            },
+            {
+              "key": "process.runtime.version",
+              "value": {
+                "stringValue": "1.8.0_422-b05"
+              }
+            },
+            {
+              "key": "service.instance.id",
+              "value": {
+                "stringValue": "a91adca2-bbb7-4e5b-861c-d291a8237c7e"
+              }
+            },
+            {
+              "key": "telemetry.distro.name",
+              "value": {
+                "stringValue": "opentelemetry-java-instrumentation"
+              }
+            },
+            {
+              "key": "telemetry.distro.version",
+              "value": {
+                "stringValue": "2.8.0"
+              }
+            },
+            {
+              "key": "telemetry.sdk.language",
+              "value": {
+                "stringValue": "java"
+              }
+            },
+            {
+              "key": "telemetry.sdk.name",
+              "value": {
+                "stringValue": "opentelemetry"
+              }
+            },
+            {
+              "key": "telemetry.sdk.version",
+              "value": {
+                "stringValue": "1.42.1"
+              }
+            },
+            {
+              "key": "service.name",
+              "value": {
+                "stringValue": "coffee-sarl-bugs"
+              }
+            }
+          ]
+        },
+        "scopeSpans": [
+          {
+            "scope": {
+              "name": "io.github.hmteams.xag.demos.coffee.CoffeeAddictAgent"
+            },
+            "spans": [
+              {
+                "traceId": "mDW+W6WyTvWdIjDkrDe/Fw==",
+                "spanId": "+dayt5QlHOA=",
+                "parentSpanId": "AmUKScYWE9E=",
+                "name": "PLAN_RATING",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1729129390015516000",
+                "endTimeUnixNano": "1729129390045885125",
+                "attributes": [
+                  {
+                    "key": "thread.name",
+                    "value": {
+                      "stringValue": "t-9223372036854716544"
+                    }
+                  },
+                  {
+                    "key": "xag.query.staffCardAvailable",
+                    "value": {
+                      "boolValue": true
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.type",
+                    "value": {
+                      "stringValue": "io.github.hmteams.xag.demos.coffee.GetCoffeMetaRater#rateKitchen"
+                    }
+                  },
+                  {
+                    "key": "thread.id",
+                    "value": {
+                      "intValue": "22"
+                    }
+                  },
+                  {
+                    "key": "xag.actions.call.return",
+                    "value": {
+                      "stringValue": "{\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n  \"rating\" : 1.0,\n  \"valuings\" : {\n    \"coffee.quality\" : \"BAD\",\n    \"cost\" : \"NONE\",\n    \"distanceTo(KITCHEN)\" : 0\n  },\n  \"criteria\" : {\n    \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n  },\n  \"previousRating\" : null,\n  \"previousRatingElement\" : null\n}"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.kind",
+                    "value": {
+                      "stringValue": "capacity_call"
+                    }
+                  },
+                  {
+                    "key": "xag.process.criteria.id",
+                    "value": {
+                      "stringValue": "[ \"getcoffee/plan-kitchencoffee\" ]"
+                    }
+                  }
+                ],
+                "status": {}
+              },
+              {
+                "traceId": "mDW+W6WyTvWdIjDkrDe/Fw==",
+                "spanId": "+7y/mAs9h68=",
+                "parentSpanId": "AmUKScYWE9E=",
+                "name": "PLAN_RATING",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1729129390047180042",
+                "endTimeUnixNano": "1729129390067440792",
+                "attributes": [
+                  {
+                    "key": "thread.name",
+                    "value": {
+                      "stringValue": "t-9223372036854716544"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.type",
+                    "value": {
+                      "stringValue": "io.github.hmteams.xag.demos.coffee.GetCoffeMetaRater#rateOffice"
+                    }
+                  },
+                  {
+                    "key": "thread.id",
+                    "value": {
+                      "intValue": "22"
+                    }
+                  },
+                  {
+                    "key": "xag.actions.call.return",
+                    "value": {
+                      "stringValue": "{\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n  \"rating\" : 0.0,\n  \"valuings\" : {\n    \"coffee.quality\" : \"GOOD\",\n    \"distanceTo(OFFICE)\" : 20,\n    \"cost\" : \"NONE\"\n  },\n  \"criteria\" : {\n    \"annInOffice\" : \"annInOffice? 1:0\"\n  },\n  \"previousRating\" : null,\n  \"previousRatingElement\" : null\n}"
+                    }
+                  },
+                  {
+                    "key": "xag.query.annInOffice",
+                    "value": {
+                      "boolValue": false
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.kind",
+                    "value": {
+                      "stringValue": "capacity_call"
+                    }
+                  },
+                  {
+                    "key": "xag.process.criteria.id",
+                    "value": {
+                      "stringValue": "[ \"getcoffee/plan-officecoffee\" ]"
+                    }
+                  }
+                ],
+                "status": {}
+              },
+              {
+                "traceId": "mDW+W6WyTvWdIjDkrDe/Fw==",
+                "spanId": "G1sLEpvDeC4=",
+                "parentSpanId": "AmUKScYWE9E=",
+                "name": "PLAN_RATING",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1729129390067551167",
+                "endTimeUnixNano": "1729129390081525084",
+                "attributes": [
+                  {
+                    "key": "thread.name",
+                    "value": {
+                      "stringValue": "t-9223372036854716544"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.type",
+                    "value": {
+                      "stringValue": "io.github.hmteams.xag.demos.coffee.GetCoffeMetaRater#rateShop"
+                    }
+                  },
+                  {
+                    "key": "thread.id",
+                    "value": {
+                      "intValue": "22"
+                    }
+                  },
+                  {
+                    "key": "xag.actions.call.return",
+                    "value": {
+                      "stringValue": "{\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n  \"rating\" : 1.0,\n  \"valuings\" : {\n    \"coffee.quality\" : \"VERY_GOOD\",\n    \"cost\" : \"HIGH\",\n    \"distanceTo(SHOP)\" : 100\n  },\n  \"criteria\" : {\n    \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n  },\n  \"previousRating\" : null,\n  \"previousRatingElement\" : null\n}"
+                    }
+                  },
+                  {
+                    "key": "xag.query.haveMoney",
+                    "value": {
+                      "boolValue": false
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.kind",
+                    "value": {
+                      "stringValue": "capacity_call"
+                    }
+                  },
+                  {
+                    "key": "xag.process.criteria.id",
+                    "value": {
+                      "stringValue": "[ \"getcoffee/plan-shopcoffee\" , \"getcoffee/plan-shopcoffee-not-applicable\"]"
+                    }
+                  }
+                ],
+                "status": {}
+              },
+              {
+                "traceId": "mDW+W6WyTvWdIjDkrDe/Fw==",
+                "spanId": "xErCrljF7Ho=",
+                "parentSpanId": "AmUKScYWE9E=",
+                "name": "PLAN_META_RATING",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1729129390002463500",
+                "endTimeUnixNano": "1729129390109893959",
+                "attributes": [
+                  {
+                    "key": "thread.name",
+                    "value": {
+                      "stringValue": "t-9223372036854716544"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.type",
+                    "value": {
+                      "stringValue": "io.github.hmteams.xag.demos.coffee.GetCoffeMetaRater#applicability"
+                    }
+                  },
+                  {
+                    "key": "thread.id",
+                    "value": {
+                      "intValue": "22"
+                    }
+                  },
+                  {
+                    "key": "xag.actions.call.return",
+                    "value": {
+                      "stringValue": "[ {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n  \"rating\" : 0.0,\n  \"valuings\" : {\n    \"coffee.quality\" : \"GOOD\",\n    \"distanceTo(OFFICE)\" : 20,\n    \"cost\" : \"NONE\"\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    },\n    \"annInOffice\" : \"annInOffice? 1:0\"\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n    \"rating\" : 0.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"GOOD\",\n      \"distanceTo(OFFICE)\" : 20,\n      \"cost\" : \"NONE\"\n    },\n    \"criteria\" : {\n      \"annInOffice\" : \"annInOffice? 1:0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n    \"rating\" : 0.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"GOOD\",\n      \"distanceTo(OFFICE)\" : 20,\n      \"cost\" : \"NONE\"\n    },\n    \"criteria\" : {\n      \"annInOffice\" : \"annInOffice? 1:0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n}, {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n  \"rating\" : 0.3,\n  \"valuings\" : {\n    \"coffee.quality\" : \"BAD\",\n    \"cost\" : \"NONE\",\n    \"distanceTo(KITCHEN)\" : 0\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    },\n    \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"BAD\",\n      \"cost\" : \"NONE\",\n      \"distanceTo(KITCHEN)\" : 0\n    },\n    \"criteria\" : {\n      \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"BAD\",\n      \"cost\" : \"NONE\",\n      \"distanceTo(KITCHEN)\" : 0\n    },\n    \"criteria\" : {\n      \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n}, {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n  \"rating\" : 0.7,\n  \"valuings\" : {\n    \"coffee.quality\" : \"VERY_GOOD\",\n    \"cost\" : \"HIGH\",\n    \"distanceTo(SHOP)\" : 100\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"haveMoney\" : \"haveMoney? 1.0:0.0\",\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    }\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"VERY_GOOD\",\n      \"cost\" : \"HIGH\",\n      \"distanceTo(SHOP)\" : 100\n    },\n    \"criteria\" : {\n      \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"VERY_GOOD\",\n      \"cost\" : \"HIGH\",\n      \"distanceTo(SHOP)\" : 100\n    },\n    \"criteria\" : {\n      \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n} ]"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.kind",
+                    "value": {
+                      "stringValue": "capacity_call"
+                    }
+                  },
+                  {
+                    "key": "xag.process.criteria.id",
+                    "value": {
+                      "stringValue": "[ \"getcoffee/plan-rating\" ]"
+                    }
+                  }
+                ],
+                "status": {}
+              },
+              {
+                "traceId": "mDW+W6WyTvWdIjDkrDe/Fw==",
+                "spanId": "AmUKScYWE9E=",
+                "parentSpanId": "4QLio8JOw7s=",
+                "name": "PLAN_SELECTION",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1729129390001964000",
+                "endTimeUnixNano": "1729129390165146875",
+                "attributes": [
+                  {
+                    "key": "thread.name",
+                    "value": {
+                      "stringValue": "t-9223372036854716544"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.type",
+                    "value": {
+                      "stringValue": "io.sarl.goals.core.behaviors.ApplicabilityRatingPlanSelection#planSelection"
+                    }
+                  },
+                  {
+                    "key": "xag.query.applicablePlans",
+                    "value": {
+                      "stringValue": "[ {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n  \"rating\" : 0.7,\n  \"valuings\" : {\n    \"coffee.quality\" : \"VERY_GOOD\",\n    \"cost\" : \"HIGH\",\n    \"distanceTo(SHOP)\" : 100\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"haveMoney\" : \"haveMoney? 1.0:0.0\",\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    }\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"VERY_GOOD\",\n      \"cost\" : \"HIGH\",\n      \"distanceTo(SHOP)\" : 100\n    },\n    \"criteria\" : {\n      \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"VERY_GOOD\",\n      \"cost\" : \"HIGH\",\n      \"distanceTo(SHOP)\" : 100\n    },\n    \"criteria\" : {\n      \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n}, {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n  \"rating\" : 0.3,\n  \"valuings\" : {\n    \"coffee.quality\" : \"BAD\",\n    \"cost\" : \"NONE\",\n    \"distanceTo(KITCHEN)\" : 0\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    },\n    \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"BAD\",\n      \"cost\" : \"NONE\",\n      \"distanceTo(KITCHEN)\" : 0\n    },\n    \"criteria\" : {\n      \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"BAD\",\n      \"cost\" : \"NONE\",\n      \"distanceTo(KITCHEN)\" : 0\n    },\n    \"criteria\" : {\n      \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n}, {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n  \"rating\" : 0.0,\n  \"valuings\" : {\n    \"coffee.quality\" : \"GOOD\",\n    \"distanceTo(OFFICE)\" : 20,\n    \"cost\" : \"NONE\"\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    },\n    \"annInOffice\" : \"annInOffice? 1:0\"\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n    \"rating\" : 0.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"GOOD\",\n      \"distanceTo(OFFICE)\" : 20,\n      \"cost\" : \"NONE\"\n    },\n    \"criteria\" : {\n      \"annInOffice\" : \"annInOffice? 1:0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n    \"rating\" : 0.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"GOOD\",\n      \"distanceTo(OFFICE)\" : 20,\n      \"cost\" : \"NONE\"\n    },\n    \"criteria\" : {\n      \"annInOffice\" : \"annInOffice? 1:0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n} ]"
+                    }
+                  },
+                  {
+                    "key": "thread.id",
+                    "value": {
+                      "intValue": "22"
+                    }
+                  },
+                  {
+                    "key": "xag.process.name",
+                    "value": {
+                      "stringValue": "PLAN_SELECTION"
+                    }
+                  },
+                  {
+                    "key": "xag.query.viablePlans",
+                    "value": {
+                      "stringValue": "[ {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n  \"rating\" : 0.7,\n  \"valuings\" : {\n    \"coffee.quality\" : \"VERY_GOOD\",\n    \"cost\" : \"HIGH\",\n    \"distanceTo(SHOP)\" : 100\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"haveMoney\" : \"haveMoney? 1.0:0.0\",\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    }\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"VERY_GOOD\",\n      \"cost\" : \"HIGH\",\n      \"distanceTo(SHOP)\" : 100\n    },\n    \"criteria\" : {\n      \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"VERY_GOOD\",\n      \"cost\" : \"HIGH\",\n      \"distanceTo(SHOP)\" : 100\n    },\n    \"criteria\" : {\n      \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n}, {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n  \"rating\" : 0.3,\n  \"valuings\" : {\n    \"coffee.quality\" : \"BAD\",\n    \"cost\" : \"NONE\",\n    \"distanceTo(KITCHEN)\" : 0\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    },\n    \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"BAD\",\n      \"cost\" : \"NONE\",\n      \"distanceTo(KITCHEN)\" : 0\n    },\n    \"criteria\" : {\n      \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetKitchenCoffee\",\n    \"rating\" : 1.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"BAD\",\n      \"cost\" : \"NONE\",\n      \"distanceTo(KITCHEN)\" : 0\n    },\n    \"criteria\" : {\n      \"staffCardAvailable\" : \"staffCardAvailable? 1.0:0.0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n}, {\n  \"goal\" : {\n    \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n    \"contextEvalution\" : true,\n    \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n    \"owner\" : {\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n      \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n    },\n    \"referenceCount\" : 0,\n    \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n  },\n  \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n  \"rating\" : 0.0,\n  \"valuings\" : {\n    \"coffee.quality\" : \"GOOD\",\n    \"distanceTo(OFFICE)\" : 20,\n    \"cost\" : \"NONE\"\n  },\n  \"criteria\" : {\n    \"coffee.quality\" : {\n      \"GOOD\" : 0.6,\n      \"BAD\" : 0.3,\n      \"VERY_GOOD\" : 1.0\n    },\n    \"cost\" : {\n      \"NONE\" : 1.0,\n      \"LOW\" : 0.8,\n      \"HIGH\" : 0.7\n    },\n    \"annInOffice\" : \"annInOffice? 1:0\"\n  },\n  \"previousRating\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n    \"rating\" : 0.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"GOOD\",\n      \"distanceTo(OFFICE)\" : 20,\n      \"cost\" : \"NONE\"\n    },\n    \"criteria\" : {\n      \"annInOffice\" : \"annInOffice? 1:0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  },\n  \"previousRatingElement\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetOfficeCoffee\",\n    \"rating\" : 0.0,\n    \"valuings\" : {\n      \"coffee.quality\" : \"GOOD\",\n      \"distanceTo(OFFICE)\" : 20,\n      \"cost\" : \"NONE\"\n    },\n    \"criteria\" : {\n      \"annInOffice\" : \"annInOffice? 1:0\"\n    },\n    \"previousRating\" : null,\n    \"previousRatingElement\" : null\n  }\n} ]"
+                    }
+                  },
+                  {
+                    "key": "xag.actions",
+                    "value": {
+                      "stringValue": "{\n  \"selectedPlan\" : {\n    \"goal\" : {\n      \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n      \"contextEvalution\" : true,\n      \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n      \"owner\" : {\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n        \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n      },\n      \"referenceCount\" : 0,\n      \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n    },\n    \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n    \"rating\" : 0.7,\n    \"valuings\" : {\n      \"coffee.quality\" : \"VERY_GOOD\",\n      \"cost\" : \"HIGH\",\n      \"distanceTo(SHOP)\" : 100\n    },\n    \"criteria\" : {\n      \"coffee.quality\" : {\n        \"GOOD\" : 0.6,\n        \"BAD\" : 0.3,\n        \"VERY_GOOD\" : 1.0\n      },\n      \"haveMoney\" : \"haveMoney? 1.0:0.0\",\n      \"cost\" : {\n        \"NONE\" : 1.0,\n        \"LOW\" : 0.8,\n        \"HIGH\" : 0.7\n      }\n    },\n    \"previousRating\" : {\n      \"goal\" : {\n        \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n        \"contextEvalution\" : true,\n        \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n        \"owner\" : {\n          \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n          \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n        },\n        \"referenceCount\" : 0,\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n      },\n      \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n      \"rating\" : 1.0,\n      \"valuings\" : {\n        \"coffee.quality\" : \"VERY_GOOD\",\n        \"cost\" : \"HIGH\",\n        \"distanceTo(SHOP)\" : 100\n      },\n      \"criteria\" : {\n        \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n      },\n      \"previousRating\" : null,\n      \"previousRatingElement\" : null\n    },\n    \"previousRatingElement\" : {\n      \"goal\" : {\n        \"goalId\" : \"f3b3456a-2ef1-42ef-9aa7-8c9105c2faa1\",\n        \"contextEvalution\" : true,\n        \"goalClass\" : \"io.github.hmteams.xag.demos.coffee.GetCoffee\",\n        \"owner\" : {\n          \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\",\n          \"parentID\" : \"2c38fb7f-f363-4f6e-877b-110b1f07cc77\"\n        },\n        \"referenceCount\" : 0,\n        \"id\" : \"77afdc8f-2170-40e9-9973-18b59a187c12\"\n      },\n      \"plan\" : \"io.github.hmteams.xag.demos.coffee.GetShopCoffee\",\n      \"rating\" : 1.0,\n      \"valuings\" : {\n        \"coffee.quality\" : \"VERY_GOOD\",\n        \"cost\" : \"HIGH\",\n        \"distanceTo(SHOP)\" : 100\n      },\n      \"criteria\" : {\n        \"haveMoney\" : \"haveMoney? 1.0:0.0\"\n      },\n      \"previousRating\" : null,\n      \"previousRatingElement\" : null\n    }\n  }\n}"
+                    }
+                  },
+                  {
+                    "key": "xag.process.kind",
+                    "value": {
+                      "stringValue": "unknown_process_kind"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.kind",
+                    "value": {
+                      "stringValue": "capacity_call"
+                    }
+                  },
+                  {
+                    "key": "xag.process.criteria.id",
+                    "value": {
+                      "stringValue": "[ \"engine/plan-selection/minimum-rating\", \"engine/plan-selection/filter-failed\", \"engine/plan-selection/highest-rated\" ]"
+                    }
+                  }
+                ],
+                "status": {}
+              },
+              {
+                "traceId": "mDW+W6WyTvWdIjDkrDe/Fw==",
+                "spanId": "4QLio8JOw7s=",
+                "name": "PLAN_REVISION",
+                "kind": "SPAN_KIND_INTERNAL",
+                "startTimeUnixNano": "1729129389998000000",
+                "endTimeUnixNano": "1729129390166147959",
+                "attributes": [
+                  {
+                    "key": "thread.name",
+                    "value": {
+                      "stringValue": "t-9223372036854716544"
+                    }
+                  },
+                  {
+                    "key": "xag.actions.0.name",
+                    "value": {
+                      "stringValue": "planSelection"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.type",
+                    "value": {
+                      "stringValue": "ReviewPlans"
+                    }
+                  },
+                  {
+                    "key": "thread.id",
+                    "value": {
+                      "intValue": "22"
+                    }
+                  },
+                  {
+                    "key": "xag.actions.0.param",
+                    "value": {
+                      "stringValue": "GetCoffee [\n  success = false\n]"
+                    }
+                  },
+                  {
+                    "key": "xag.query.unattachedGoals",
+                    "value": {
+                      "stringValue": "[GoalIntentionFrame [\n  goal = GetCoffee [\n    success = false\n  ]\n  state = ACTIVATED\n  planFrame = Optional.empty\n  failedPlansHistory = {}\n  goalSuspended = false\n  goalDeferred = false\n  triggeringPlan = Optional.empty\n  createdAt = 1729129389996\n  intentionStack = IntentionStackImpl [\n    adoptedAt = 1729129389996\n    topGoalFrame = GoalIntentionFrame@448098002\n  ]\n  uuid = 435c5e9d-4bc5-4f1a-aeeb-a1bfe0b03da3\n]]"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.kind",
+                    "value": {
+                      "stringValue": "event"
+                    }
+                  },
+                  {
+                    "key": "xag.trigger.id",
+                    "value": {
+                      "intValue": "-1172521393"
+                    }
+                  }
+                ],
+                "status": {}
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

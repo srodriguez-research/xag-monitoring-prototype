@@ -15,6 +15,10 @@ def step_impl_bel(context, belief, value):
         span = context.span
         belief2find = f"xag.query.{belief}"
 
+        # if not value:
+        #     pprint(context.span)
+        #     assert False
+        #
         #  Has this rating considered
         if belief2find not in span:
             context.scenario.skip(f"Belief {belief2find} was not used in this decision")

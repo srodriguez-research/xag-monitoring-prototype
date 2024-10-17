@@ -10,9 +10,7 @@ TEMPO_URL = os.environ.get("TEMPO_URL", TEMPO_URL_DEFAULT)
 
 
 def search_tempo(traceql) -> dict:
-    params = {
-        "q": traceql,
-    }
+    params = {"q": traceql, "limit": 200}
     response = requests.get(TEMPO_URL + "/search", params=params)
     return response.json()
 

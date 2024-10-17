@@ -22,6 +22,12 @@ Feature: GetCoffee
     When I adopt the GetCoffee goal
     Then plan ShopCoffee is applicable
 
+  # @goal-plan
+  # Scenario: plan-shopcoffee-not-applicable
+  #   Given I believe haveMoney is false 
+  #   When I adopt the GetCoffee goal
+  #   Then plan ShopCoffee is not applicable
+
   @goal-plan-preference @rating
   Scenario Outline: plan-rating
     Given I have an applicable plan with valuing coffee.quality <quality>
