@@ -1,22 +1,35 @@
 # Monitoring and Verification of Explainable Agents 
 
-This repository is provided as part of our work for AAMAS 2025
+This repository is provided as part of our work for AAMAS 2025 (extended abstract) and IJCAI 2025.
 
 ## Configuration
 
-In the docker compose file for the monitor service
-
+If monitoring will be started using docker compose, you have to configure which `service` (i.e. agent system) it will be monitoring.
+In the docker compose file for the monitor service:
 ```
       - SERVICE_NAME=coffee-mock
 ```
 
+**By default monitoring is not started using docker**
+
+
 ## Running
+
+
+### Starting Grafana services
+
+Traces and logs are managed by Grafana suite of applications. 
+To start
 
 ```shell
 mkdir -p data/tempo-data
 docker compose up -d
 open http://localhost:3000/explore
-docker compose down -v 
+```
+
+To shutdown:
+```
+docker compose down -v
 ```
 
 
