@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Explanier</title>
+
+  <!-- ---------------------------- -->
+  <!-- Styling  -->
+  <!-- ---------------------------- -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css">
+  <!-- ---------------------------- -->
+  <!-- Syntax highlight  -->
+  <!-- ---------------------------- -->
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"> -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/gherkin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
+
+  <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+
+  <main class="container">
+    <h1>Explain Plan Selection</h1>
+
+    <p>Trace id : {{trace['traceId']}}</p>
+
+    {% if report['status'] == "failed" %}
+
+    <article class="pico-background-red-600">
+      INVALID Behaviour detected
+    </article>
+    {%else%}
+
+    <article class="pico-background-green-600">
+      VALID Behaviour
+    </article>
+    {% endif %}
+
+    <h2>Feature</h2>
+    <p>{{report['description'] | join(' ' )}} </p>
+
+    <h2>Scenarios</h2>
+
+    <section id="accordions">
+      {%for scenario in scenarios%}
+
+      {% set name = scenario['name']%}
+      {% set status = scenario['status']%}
+
+
+      {% if status == 'passed' %}
+      {% set status_color = 'green' %}
+      {% elif status == 'failed' %}
+      {% set status_color = 'red' %}
+      {%else%}
+      {% set status_color = 'yellow' %}
+      {%endif%}
+      <details>
+        <summary role="button" class="pico-background-{{status_color}}-500"> Scenario: {{name}} - {{status}}</summary>
+
+        {%if debug:%}
+        <details>
+          <summary>Full trace</summary>
+
+          <pre> <code class="language-json">{{scenario| tojson(2)}} </code> </pre>
+        </details>
+
+        {%endif%}
+      </details>
+      {%endfor%}
+
+    </section>
+
+    <!-- <pre> <code class="language-gherkin">{{feature_text}} </code> </pre> -->
+
+    {%if debug:%}
+    <section id="accordions">
+
+      <h4>Report</h4>
+      <details>
+
+        <pre> <code class="language-json">{{report | tojson(2)}} </code> </pre>
+
+      </details>
+
+      <h4>Trace</h4>
+      <details>
+        <pre> <code class="language-json">{{trace | tojson(2)}} </code> </pre>
+      </details>
+    </section>
+
+    {%endif%}
+  </main>
+</body>
+
+</html>

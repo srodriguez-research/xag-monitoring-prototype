@@ -1,57 +1,37 @@
-import json
 import os
 
-from behave import parser
 from behave.model import Feature, Scenario, Step
 from dotenv import load_dotenv
 from flask import Flask, render_template
 
+from uss.behave import find_scenarios, parse_behave_report
 from uss.tempo import parse_trace_json
 
 app = Flask(__name__)
-
 _ = load_dotenv()  # take environment variable
 
 FEATURES_DIR = os.getenv("FEATURES_DIR")
-TRACES_DIR = os.getenv("TRACES_DIR")
+TRACES_DATA_DIR: str = "data"  # os.getenv("TRACES_DATA_DIR")
 
 
 @app.route("/")
 def explain_plan_selection():
-    trace_id = "trace.json"
-    tracefile = os.path.join(TRACES_DIR, trace_id)
-
-    # Select span with plan revision
-
-    feature_file = os.path.join(FEATURES_DIR, "getcoffee.feature")
-
-    feature_text = open(feature_file).read()
-    feature: Feature = parser.parse_file(feature_file)
-    scenario: Scenario = feature.scenarios[0]
-
-    beliefs = {"haveMoney": False, "staffCardAvailable": True, "annInOffice": False}
-
-    # debug = False
-    debug = False
-    # parse the trace to get spans
-    spans = parse_trace_json(tracefile)
-    # process_to_find = "PLAN_REVISION"
-    # process_to_find = "PLAN_SELECTION"
-    process_to_find = "PLAN_META_RATING"
-    # process_to_find = "PLAN_RATING"
-    # span = next(s for s in spans["spans"] if s["name"] == process_to_find)
-    span = [s for s in spans["spans"] if s["name"] == process_to_find]
-    span = json.dumps(span, indent=2)
-    # span = ""
-
-    selected_plan = "KitchenCoffee"
-    return render_template(
-        "explain_plan_selection.html",
-        span=span,
-        spans=spans,
-        selected_plan=selected_plan,
-        beliefs=beliefs,
-        scenario=scenario,
-        feature_text=feature_text,
-        debug=debug,
+    TRACE_ID = "7a9fc1aaf821f7d6a6f06366c7c2136a"
+    trace = parse_trace_json(os.path.join(TRACES_DATA_DIR, "traces_store", TRACE_ID))
+    report = parse_behave_report(
+        os.path.join(TRACES_DATA_DIR, "reports", f"{TRACE_ID}-report.json")
     )
+
+    scenarios = find_scenarios(report)
+
+    return render_template(
+        "explain_plan_selection_with_report.html",
+        debug=True,
+        report=report,
+        trace=trace,
+        scenarios=scenarios,
+    )
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
