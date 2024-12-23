@@ -16,21 +16,44 @@ TRACES_DATA_DIR: str = "data"  # os.getenv("TRACES_DATA_DIR")
 
 @app.route("/")
 def explain_plan_selection():
-    TRACE_ID = "7a9fc1aaf821f7d6a6f06366c7c2136a"
+    # TRACE_ID = "7a9fc1aaf821f7d6a6f06366c7c2136a"
+    TRACE_ID = "5343cbbed63ea9290abfe7d972f5f240"
     trace = parse_trace_json(os.path.join(TRACES_DATA_DIR, "traces_store", TRACE_ID))
     report = parse_behave_report(
         os.path.join(TRACES_DATA_DIR, "reports", f"{TRACE_ID}-report.json")
     )
 
     scenarios = find_scenarios(report)
+    scenarios_failed = filter(lambda s: s["status"] == "failed", scenarios)
+    scenarios_passed = filter(lambda s: s["status"] == "passed", scenarios)
+    scenarios_skipped = filter(lambda s: s["status"] == "skipped", scenarios)
 
     return render_template(
         "explain_plan_selection_with_report.html",
         debug=True,
         report=report,
         trace=trace,
-        scenarios=scenarios,
+        scenarios_failed=scenarios_failed,
+        scenarios_passed=scenarios_passed,
+        scenarios_skipped=scenarios_skipped,
     )
+
+
+def status2color(status: str) -> str:
+
+    if status == "passed":
+        return "green"
+
+    if status == "skipped":
+        return "yellow"
+
+    if status == "failed":
+        return "red"
+
+    return "purple"
+
+
+app.jinja_env.filters["status2color"] = status2color
 
 
 if __name__ == "__main__":

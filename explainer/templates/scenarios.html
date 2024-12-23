@@ -1,0 +1,35 @@
+<section id="accordions">
+  {%for scenario in scenarios %}
+
+  {% set name = scenario['name']%}
+  {% set status = scenario['status']%}
+
+  <details>
+    <summary role="button" class="pico-background-{{status | status2color}}-500"> Scenario: {{name}} - {{status}}
+    </summary>
+    {%for step in scenario['steps']%}
+    {%if 'result' in step%}
+    {% set step_status = step['result']['status'] %}
+    {%else%}
+    {% set step_status = 'uneval' %}
+    {%endif%}
+    <p class="pico-background-{{ step_status | status2color}}-50">{{step['keyword']}} {{step['name']}}
+    </p>
+    {%endfor%}
+
+    <pre> <code class="language-gherkin">
+        {%for step in scenario['steps']%} {{step['keyword']}} {{step['name']}}
+        {%endfor%} </code> </pre>
+
+    {%if debug:%}
+    <details>
+      <summary>Full trace</summary>
+
+      <pre> <code class="language-json">{{scenario| tojson(2)}} </code> </pre>
+    </details>
+
+    {%endif%}
+  </details>
+  {%endfor%}
+
+</section>

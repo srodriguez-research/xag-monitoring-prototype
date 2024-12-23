@@ -52,39 +52,22 @@
     <h2>Feature</h2>
     <p>{{report['description'] | join(' ' )}} </p>
 
-    <h2>Scenarios</h2>
+    {% if report['status'] == "failed" %}
+    <h2>Scenarios that failed validation</h2>
+    {% with scenarios=scenarios_failed%}
+    {% include "scenarios.html" %}
+    {%endwith%}
+    {%endif%}
 
-    <section id="accordions">
-      {%for scenario in scenarios%}
+    <h2>Scenarios that conformed to requirements</h2>
 
-      {% set name = scenario['name']%}
-      {% set status = scenario['status']%}
-
-
-      {% if status == 'passed' %}
-      {% set status_color = 'green' %}
-      {% elif status == 'failed' %}
-      {% set status_color = 'red' %}
-      {%else%}
-      {% set status_color = 'yellow' %}
-      {%endif%}
-      <details>
-        <summary role="button" class="pico-background-{{status_color}}-500"> Scenario: {{name}} - {{status}}</summary>
-
-        {%if debug:%}
-        <details>
-          <summary>Full trace</summary>
-
-          <pre> <code class="language-json">{{scenario| tojson(2)}} </code> </pre>
-        </details>
-
-        {%endif%}
-      </details>
-      {%endfor%}
-
-    </section>
-
-    <!-- <pre> <code class="language-gherkin">{{feature_text}} </code> </pre> -->
+    {% with scenarios=scenarios_passed%}
+    {% include "scenarios.html" %}
+    {%endwith%}
+    <h2>Scenarios that did not apply to my beliefs</h2>
+    {% with scenarios=scenarios_skipped %}
+    {% include "scenarios.html" %}
+    {%endwith%}
 
     {%if debug:%}
     <section id="accordions">
