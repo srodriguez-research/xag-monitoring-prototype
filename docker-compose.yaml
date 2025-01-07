@@ -64,13 +64,6 @@ services:
       - init
       - memcached
 
-  # k6-tracing:
-  #   image: ghcr.io/grafana/xk6-client-tracing:v0.0.5
-  #   environment:
-  #     - ENDPOINT=tempo:4317
-  #   restart: always
-  #   depends_on:
-  #     - tempo
 
   loki:
     image: grafana/loki:main
@@ -80,11 +73,6 @@ services:
       - ./configs/loki-config.yaml:/etc/loki/local-config.yaml
     command: -config.file=/etc/loki/local-config.yaml
 
-  # prompushgateway:
-  #   image: prom/pushgateway
-  #   ports:
-  #    - "9091:9091"
-  #
   prometheus:
     image: prom/prometheus:latest
     command:
@@ -108,3 +96,13 @@ services:
       - GF_FEATURE_TOGGLES_ENABLE=traceqlEditor traceQLStreaming metricsSummary
     ports:
       - "3000:3000"
+
+
+# Defualt demo of tempo with "shopping cart example"
+  # k6-tracing:
+  #   image: ghcr.io/grafana/xk6-client-tracing:v0.0.5
+  #   environment:
+  #     - ENDPOINT=tempo:4317
+  #   restart: always
+  #   depends_on:
+  #     - tempo

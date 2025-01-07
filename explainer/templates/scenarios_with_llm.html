@@ -10,38 +10,11 @@
     </summary>
 
     {%if status == 'failed'%}
-
-    {% set given, when, then = scenario_breakdown(scenario) %}
-
-    <p>I failed to comply to the expected behaviour in this scenario</p>
-    <p>In this case,</p>
-    <ul>
-
-      {%for step in given%}
-      <li>
-        {{step['name'] | past_tense}}
-      </li>
-      {%endfor%}
-
-    </ul>
-
-    <p>However, when {{when['name'] | past_tense}}</p>
-    <p>
-      Then
-    </p>
-    <ul>
-
-      {%for step in then%}
-
-      <li>
-        {{step | explain_failed_step}}
-      </li>
-      {%endfor%}
-
-    </ul>
+    {%set explanation = scenario | llm_explain%}
+    {{explanation}}
     {%endif%}
 
-    <h3>Scenario steps breakdown:</h3>
+    <p>Steps breakdown:</p>
     {%for step in scenario['steps']%}
     {%if 'result' in step%}
     {% set step_status = step['result']['status'] %}

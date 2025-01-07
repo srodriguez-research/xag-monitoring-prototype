@@ -12,6 +12,11 @@ In the docker compose file for the monitor service:
 
 **By default monitoring is not started using docker**
 
+## Requirements to test
+
+You can find the Gherkin specificaitons in `./monitoring/features/`
+
+
 
 ## Running
 
@@ -32,10 +37,49 @@ To shutdown:
 docker compose down -v
 ```
 
-
-
 `tempo-data` stores all data for local use only.
 
+### Running monitoring system locally 
+
+Edit `./monitoring/monitor-locally.sh` and set `SERVICE_NAME` to match you agent system the `OTEL_RESOURCE_ATTRIBUTES` (see below)
+
+
+In `./monitoring`:
+
+1. Install dependencies `poetry install`
+2. Run the monitor `./monitor-locally.sh`
+
+To get local metrics on the number errors found you can run:
+
+```
+watch -n .5 poetry run python summarize-reports.py data/reports
+```
+
+
+### Running the explainer
+
+`Explainer` is capable of explaining traces outcomes based on the User and System Stories that apply to them.
+
+To run
+
+
+
+### Running the agent system being monitored
+
+
+```
+JAVA_TOOL_OPTIONS=-javaagent:/Users/srodriguez//Workspaces/SARL/libs/opentelemetry-javaagent.jar
+OTEL_BSP_EXPORT_TIMEOUT=30000
+OTEL_BSP_MAX_EXPORT_BATCH_SIZE=256
+OTEL_BSP_SCHEDULE_DELAY=500
+OTEL_EXPORTER_OTLP_INSECURE=true
+OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
+OTEL_EXPORTER_OTLP_RETRY_COUNT=5
+OTEL_LOGS_EXPORTER=none
+OTEL_METRICS_EXPORTER=none
+OTEL_RESOURCE_ATTRIBUTES=service.name=coffee-sarl-bugs
+OTEL_TRACES_EXPORTER=otlp
+```
 
 ### Running monitoring system locally on single trace
 
@@ -48,6 +92,7 @@ Editing with vim
 ```
 source $(poetry env info --path)/bin/activate
 ```
+
 
 ### Reports
 Intall allure
