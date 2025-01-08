@@ -2,7 +2,7 @@
 Feature: GetCoffee
   As researcher,
   I want to GetCoffee
-  so I can finish my AAMAS experiments
+  so I can finish my IJCAI experiments
   
   @goal-plan
   Scenario: plan-kitchencoffee
