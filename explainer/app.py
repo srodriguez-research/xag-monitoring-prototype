@@ -139,6 +139,17 @@ def explain_failed_step(step) -> str:
     return llm(prompt)
 
 
+def find_span_for_scenario(scenario, trace):
+    CRITERIA_KEY = "xag.process.criteria.id"
+    name = scenario["name"].split("--")[0].strip()
+    print(f"## finding {name}")
+    for span in trace["spans"]:
+        if CRITERIA_KEY in span and name in span[CRITERIA_KEY]:
+            print(f"## {span=}")
+            return span
+    return None
+
+
 def llm_explain(scenario) -> str:
     return llm(build_prompt_failed(scenario))
 
@@ -149,6 +160,7 @@ app.jinja_env.filters["llm_explain"] = llm_explain
 app.jinja_env.filters["past_tense"] = past_tense
 app.jinja_env.filters["explain_failed_step"] = explain_failed_step
 app.jinja_env.globals.update(scenario_breakdown=scenario_breakdown)
+app.jinja_env.globals.update(find_span_for_scenario=find_span_for_scenario)
 
 
 if __name__ == "__main__":

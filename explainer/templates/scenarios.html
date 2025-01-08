@@ -13,26 +13,19 @@
 
     {% set given, when, then = scenario_breakdown(scenario) %}
 
-    <p>I failed to comply to the expected behaviour in this scenario</p>
-    <p>In this case,</p>
+    <p>In this case, <b>given</b></p>
     <ul>
-
       {%for step in given%}
       <li>
         {{step['name'] | past_tense}}
       </li>
       {%endfor%}
-
     </ul>
 
-    <p>However, when {{when['name'] | past_tense}}</p>
-    <p>
-      Then
-    </p>
+    <p>However, <b>when</b> {{when['name'] | past_tense}} <b>Then</b></p>
     <ul>
 
       {%for step in then%}
-
       <li>
         {{step | explain_failed_step}}
       </li>
@@ -40,6 +33,13 @@
 
     </ul>
     {%endif%}
+
+    {%set span = find_span_for_scenario(scenario, trace) %}
+    <p>This decision was
+      triggered by <b>{{span['xag.trigger.kind']}}</b>
+      in <b>{{span['xag.trigger.type']}}</b>
+    </p>
+
 
     <h3>Scenario steps breakdown:</h3>
     {%for step in scenario['steps']%}
