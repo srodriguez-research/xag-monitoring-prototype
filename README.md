@@ -1,6 +1,6 @@
 # Monitoring and Verification of Explainable Agents 
 
-This repository is provided as part of our work for AAMAS 2025 (extended abstract) and IJCAI 2025.
+This repository is provided as part of our work for AAMAS 2025 (extended abstract). 
 
 ## Configuration
 
